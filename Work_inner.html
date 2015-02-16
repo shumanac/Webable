@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Webable</title>
+	
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">	
+
+	<!-- CSS -->
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+
+	<!--[if IE 9]>-->
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+</head>
+<body>
+		<header class="header large-4 medium-4 small-4 columns cd-header">
+
+		<div class="logo left"><img src="images/logo.png"></div>
+		<a class="cd-primary-nav-trigger " href="#0">
+		<div class="menu right small-1 columns">
+			     <span class="menu right cd-menu-icon"></span>
+
+		</a>
+
+		</div>
+	</header><!--End of header-->
+
+	
+  <nav class="cd-primary-nav large-4 medium-4 small-4 columns">
+	
+		<div class="white_logo"><img src="images/logo_white.png"></div>
+
+	<ul>
+	    <li><a href="#">Work</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Capabilities</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Bable Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+    </ul>  
+  </nav> <!--Main Navigation-->
+  <br />
+	<p>
+		<h1 class="heading">Bottle of Fun</h1>
+		<h4 class="sub-heading">Businesses need to fulfill brand promises by delighting</h4>
+	</p>
+		<ul class="example-orbit-content" data-orbit>
+  			<li data-orbit-slide="headline-1">
+    		<div><img src="images/banner1.png"></div>
+  			</li>
+  			<li data-orbit-slide="headline-2">
+    		<div><img src="images/banner1.png"></div>
+  			</li>
+  			<li data-orbit-slide="headline-3">
+    		<div><img src="images/banner1.png"></div>
+  			</li>
+		</ul>
+<!---Slider---->
+
+		<div class="client_thoughts">
+			<div class="description">
+			<h1>Businesses need to fulfill brand promises by delighting </h1>
+			<div class="button"><a href="#"><h2>Share<h2></a></div>
+			<h5>Client:I am real<br />
+			Year:2014</h5>
+		    <br/>
+		   	<h4>
+		    	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+		    	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		    	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		    </h4>
+		    </div>
+
+			<div class="more_projects">
+				<h1>More Projects <br />
+				<img src="images/arrow_down.png"></h1>
+
+			</div>
+		</div>
+	
+		<div class=" container hover_projects">
+			<ul class="large-block-grid-3">
+				<li><img src="images/dkny800x6001.jpg"></li>
+				<li><img src="images/Thumbnail_800x600_O2.jpg"></li>
+				<li><img src="images/Thumbnail_800x600-v4.jpg"></li>
+			</ul>
+		</div>
+
+	<footer class="footer large-12 columns">
+			<img class="footer_logo" src="images/footer_webable.png">
+			<img class="footer_line" src="images/footer_line.png" >
+			
+			<div>
+				<ul class="footer_list">
+					<li><h4><a href="#">Contact</a></h4></li>
+					<li><h4><a href="#">The Bable blog</a></h4></li>
+					<li><h4><a href="#">Careers</a></h4></li>
+
+				</ul>
+			
+				<div class="footer-text">2015 Webable Digital. All Rights Reserved.</div> 
+			</div>
+			
+
+		</footer>
+    </section>
+
+     <!--JS-->
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+    	$(document).foundation('orbit', 'reflow');
+    </script>
+
+
+    <script>
+      jQuery(document).ready(function($){
+	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
+	var MQL = 1170;
+
+	//primary navigation slide-in effect
+	if($(window).width() > MQL) {
+		var headerHeight = $('.cd-header').height();
+		$(window).on('scroll',
+		{
+	        previousTop: 0
+	    }, 
+	    function () {
+		    var currentTop = $(window).scrollTop();
+		    //check if user is scrolling up
+		    if (currentTop < this.previousTop ) {
+		    	//if scrolling up...
+		    	if (currentTop > 0 && $('.cd-header').hasClass('is-fixed')) {
+		    		$('.cd-header').addClass('is-visible');
+		    	} else {
+		    		$('.cd-header').removeClass('is-visible is-fixed');
+		    	}
+		    } else {
+		    	//if scrolling down...
+		    	$('.cd-header').removeClass('is-visible');
+		    	if( currentTop > headerHeight && !$('.cd-header').hasClass('is-fixed')) $('.cd-header').addClass('is-fixed');
+		    }
+		    this.previousTop = currentTop;
+		});
+	}
+
+	//open/close primary navigation
+	$('.cd-primary-nav-trigger').on('click', function(){
+		$('.cd-menu-icon').toggleClass('is-clicked'); 
+		$('.cd-header').toggleClass('menu-is-open');
+		$('.logo').toggleClass('hidden');
+			
+		
+		//in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
+		if( $('.cd-primary-nav').hasClass('is-visible') ) {
+			$('.cd-primary-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+				$('body').removeClass('overflow-hidden');
+			});
+		} else {
+			$('.cd-primary-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+				$('body').addClass('overflow-hidden');
+			});	
+		}
+	});
+});
+
+
+</script>
+
+
+
+    
+</body>
+</html>

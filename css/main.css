@@ -1,0 +1,813 @@
+
+@font-face{
+	font-family: museo100;
+	src:url("../Fonts/Museo/Museo100-Regular.otf");
+}
+@font-face{	font-family: museo300;
+	src:url("../Fonts/Museo/Museo300-Regular.otf");
+}
+@font-face{	font-family: museo500;
+	src:url("../Fonts/Museo/Museo500-Regular.otf");
+}
+@font-face{
+	font-family: museo700;
+	src:url("../Fonts/Museo/Museo700-Regular.otf");
+}
+@font-face{
+	font-family: museo900;
+	src:url("../Fonts/Museo/Museo900-Regular.otf");
+}
+@font-face{
+	font-family: museo_sans900;
+	src:url("../Fonts/Museo Sans/exljbris - MuseoSans-900.otf");
+}
+@font-face{
+	font-family: museo_sans500;
+	src:url("../Fonts/Museo Sans/MuseoSans_500.otf");
+}
+@font-face{
+	font-family: opensans-regular;
+	src:url("../Fonts/Open Sans/OpenSans-Regular.ttf");
+}
+@font-face{
+	font-family: opensans-Bold;
+	src:url("../Fonts/Open Sans/OpenSans-Bold.ttf");
+}
+@font-face{
+	font-family: opensans-BoldItalic;
+	src:url("../Fonts/Open Sans/OpenSans-BoldItalic.ttf");
+}
+@font-face{
+	font-family: OpenSans-ExtraBold;
+	src:url("../Fonts/Open Sans/OOpenSans-ExtraBold.ttf");
+}
+@font-face{
+	font-family: OpenSans-ExtraBoldItalic;
+	src:url("../Fonts/Open Sans/OpenSans-ExtraBoldItalic.ttf");
+}
+@font-face{
+	font-family: OpenSans-Italic;
+	src:url("../Fonts/Open Sans/OpenSans-Italic.ttf");
+}
+@font-face{
+	font-family: OpenSans-Light;
+	src:url("../Fonts/Open Sans/OpenSans-Light.ttf");
+}
+@font-face{
+	font-family: OpenSans-LightItalic;
+	src:url("../Fonts/Open Sans/OpenSans-LightItalic.ttf");
+}
+@font-face{
+	font-family: OpenSans-Semibold;
+	src:url("../Fonts/Open Sans/OpenSans-Semibold.ttf");
+}
+@font-face{
+	font-family: OpenSans-SemiboldItalic;
+	src:url("../Fonts/Open Sans/OpenSans-SemiboldItalic.ttf"); 
+
+}
+/*************FONT FACE**************************************/
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/******** Primary style***************/
+.header{
+	height: 100px;
+}
+.logo{
+	margin: 15px 20px 0 20px;
+  
+	
+}
+.menu{
+	margin: 15px 0 20px;
+}
+
+.navigation-wrapper {
+	background: -webkit-linear-gradient(#002a67, #0079dd); /* For Safari 5.1 to 6.0 */
+ 	background: -o-linear-gradient(#002a67, #0079dd); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#002a67, #0079dd); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#002a67, #0079dd); /* Standard syntax */
+	padding: 40px 0 0 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 900;
+	display: none;
+}
+
+.navigation {
+	padding: 20px 5% 0 5%;
+	display: none;
+}
+
+.show-menu {
+	display: block;
+}
+
+.navigation li {
+	list-style: none;
+	margin: 50px 0;
+	transition: all ease .6s;
+} .navigation li.small-padding {
+	margin: 0;
+  }
+
+.navigation li a {
+	display: block;
+	padding: 10px 0 10px 1%;
+	color: #fff;
+	text-decoration: none;
+	font-size: 150%;
+	letter-spacing: .1em;
+	border-left: 3px solid #fff;
+	opacity: 0.95;
+	-moz-transition: all ease .3s;
+	-webkit-transition: all ease .3s;
+	-ms-transition: all ease .3s;
+	-o-transition: all ease .3s;
+	transition: all ease .3s;
+}
+
+.navigation li a:hover {
+	color: #fff;
+	padding-left: 2%;
+	border-left: 3px solid #eee;
+}
+
+
+.cd-header {
+  
+  top: 0%;
+  left: 0;
+  width:100%;
+  /*background: rgba(2, 23, 37, 0.95);
+  height: 50px;
+  width: 100%;*/
+  z-index: 3;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media only screen and (min-width: 768px) {
+  .cd-header {
+    height: 80px;
+    background: transparent;
+    box-shadow: none;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-header {
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .cd-header.is-fixed {
+    /* when the user scrolls down, we hide the header right above the viewport */
+    position: fixed;
+    top: -80px;
+    background-color: #fff;
+    opacity: 0.85;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+  }
+  .cd-header.is-visible {
+    /* if the user changes the scrolling direction, we show the header */
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  .cd-header.menu-is-open {
+    /* add a background color to the header when the navigation is open */
+    background-color:  #002a67 solid;
+  }
+}
+
+
+.cd-primary-nav-trigger {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  
+}
+
+.cd-primary-nav-trigger .cd-menu-icon {
+  /* this span is the central line of the menu icon */
+  
+  position: absolute;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  width: 27px;
+  height: 3px;
+  background-color: #0079dd;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+
+  /* these are the upper and lower lines in the menu icon */
+}
+.cd-primary-nav-trigger .cd-menu-icon {
+  /* this span is the central line of the menu icon */
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(50%) translateY(-50%);
+  -moz-transform: translateX(50%) translateY(-50%);
+  -ms-transform: translateX(50%) translateY(-50%);
+  -o-transform: translateX(50%) translateY(-50%);
+  transform: translateX(50%) translateY(-50%) ;
+  width: 28px;
+  height: 3px;
+  background-color: #0079dd;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s; 
+  
+}
+/* these are the upper and lower lines in the menu icon */
+ 
+.cd-primary-nav-trigger .cd-menu-icon::before, .cd-primary-nav-trigger .cd-menu-icon:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #0079dd;
+  right: 0;
+  z-index: -1;
+  display: block;
+  -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+  -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+  transition: transform .3s, top .3s, background-color 0s;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon::before {
+  top: -7px;
+}
+.cd-primary-nav-trigger .cd-menu-icon::after {
+  top: 7px;
+}
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked {
+  background-color: transparent;
+
+}
+
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::before, .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
+  background-color: #fff;
+}
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::before {
+  
+  top: 0;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
+  top: 0;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.white_logo img{
+  visibility: visible;
+	float: left;
+  margin: -36px 35px;
+
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .cd-primary-nav-trigger {
+    width: 100px;
+    padding-left: 1em;
+    background-color: transparent;
+    height: 30px;
+    line-height: 30px;
+    right: 2.2em;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .cd-primary-nav-trigger .cd-menu-icon {
+    left: auto;
+    right: -3em;
+    -webkit-transform: translateX(0) translateY(-50%);
+    -moz-transform: translateX(0) translateY(-50%);
+    -ms-transform: translateX(0) translateY(-50%);
+    -o-transform: translateX(0) translateY(-50%);
+    transform: translateX(0) translateY(-50%);
+  }
+}
+
+.cd-primary-nav {
+  /* by default it's hidden - on top of the viewport */
+  position: fixed;
+  top: 0;
+  margin-left: 0px;
+  height: 100%;
+  width: 100%;
+  background: -webkit-linear-gradient(#002a67, #0079dd); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#002a67, #0079dd); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#002a67, #0079dd); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#002a67, #0079dd); /* Standard syntax */
+  z-index: 2;
+  text-align: center;
+  padding: 50px 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.cd-primary-nav ul {
+	width: 100%;
+	left: 0;
+  margin-top:115px;
+}
+.cd-primary-nav li {
+  list-style-type: none;
+  font-size: 32pt;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-family: "museo_sans900";
+  font-weight: 500;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 8px -17px;
+  width: 100%;
+  
+}
+.cd-primary-nav a {
+  color: #fff;
+  display: inline-block;
+ 
+}
+ .cd-primary-nav ul a:hover {
+  background-color: #fff;
+  width: 100%;
+  color: #0079dd;
+}
+
+
+.cd-primary-nav.is-visible {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+
+
+.pic_holder{
+	margin-bottom: 0%;
+}
+.pic_holder ul li{
+	padding: 0% 0% 0% 0%;
+	position: relative;
+	overflow: hidden;
+	margin: 0% 0% 0% 0%;
+	display: inline-block;
+
+}
+ul.img-list {
+  list-style-type: none;
+  margin: 0% 0% 0% 0%;
+  padding: 0;
+  text-align: center;
+  
+}
+
+
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  
+}
+ 
+span.text-content span {
+  display: block;
+  
+  
+}
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 200%;
+  -webkit-transition: opacity 900ms;
+  -moz-transition: opacity 900ms;
+  -o-transition: opacity 900ms;
+  transition: opacity 900ms;
+
+}
+ 
+ul.img-list li:hover span.text-content {
+  opacity: 0.85;
+  background: -webkit-linear-gradient( left, #002a67, #0079dd) !important; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #002a67, #0079dd) !important; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #002a67, #0079dd) !important; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #002a67, #0079dd) !important; /* Standard syntax */
+
+
+  
+}
+
+
+.head_name{
+	font-family: "museo_sans900";
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 1;
+	word-wrap:break-word;
+	margin: 54% 5% 0% 0;
+	-webkit-transform: translateZ(-30px);
+-moz-transform: translateZ(-30px);
+-ms-transform: translateZ(-30px);
+-o-transform: translateZ(-30px);
+transform: translateZ(-30px);
+-webkit-transition: opacity 0.2s 0.2s, -moz-transform 0.2s 0.2s;
+-moz-transition: opacity 0.2s 0.2s, -moz-transform 0.2s 0.2s;
+transition: opacity 0.2s 0.2s, -moz-transform 0.2s 0.2s;
+-webkit-transition: opacity 0.2s 0.2s, -webkit-transform 0.2s 0.2s;
+-moz-transition: opacity 0.2s 0.2s, -webkit-transform 0.2s 0.2s;
+transition: opacity 0.2s 0.2s, -webkit-transform 0.2s 0.2s;
+-webkit-transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
+-moz-transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
+transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
+}
+
+.show_more{
+	background-image: url(../images/more-projects.png);
+	width: 100%;
+	height: 43px;
+	margin:0;
+	padding: 0;
+}
+.show_more h2{
+	font-family: "museo_sans900";
+	text-align: center;
+	color:#fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	line-height: 2.5em;
+	margin-top: 0;
+}
+.clients{
+	padding-top: 30px;
+}
+.clients h1{
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 36px;
+	font-family: "museo_sans900";
+	color:#007BE1;
+	text-align: center;
+	text-transform: uppercase;
+}
+.clients h4{
+	color:#5C5C5C;
+	font-family: "museo900";
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: normal;
+	text-align: center;
+	line-height:0em; 
+}
+.client_logo{
+	text-align: center;
+	margin: 33px 102px 13px 102px;
+}
+
+/*******************************FOOTER***************************************/
+
+
+.footer{
+	background-image: url(../images/footer_bck.png);
+	height: 200px;
+
+}
+.footer_logo{
+	margin:48px auto auto;
+	position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%) }
+
+}
+
+.line{
+	background-image: url(../images/footer_line.png);
+	margin: 48px auto auto;
+	position: relative;
+	left: 50%;
+	width: 60%;
+	transform: translate(-50%, -50%);
+}
+
+.footer_list li{
+	float: right;
+	margin-right: 86px;
+	padding-top: 10px;
+	
+}
+.footer_list li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 11px;
+	font-family: "museo_sans900";
+}
+.footer-text{
+	text-decoration: none;
+	color: #fff;
+	font-size: 12px;
+	margin-left: 85px;
+	padding-top: 12px;
+
+}
+
+/*******************************FOOTER***************************************/
+
+.heading{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 26pt;
+	font-family: "museo_sans900";
+	color:#007BE1;
+}
+.sub-heading{
+	color:#5C5C5C;
+	font-size: 18px;
+	text-align: center;
+	line-height: 0em;
+	font-family: "museo500";
+
+}
+.orbit-container .orbit-prev,
+.orbit-container .orbit-next {
+    position: absolute;
+    top: 45%;
+    margin-top: -25px;
+    width: 70px;
+	  height: 68px;
+    line-height: 50px;
+    color: white;
+    background-color: transparent;
+    text-indent: -9999px !important;
+    z-index: 1; 
+  }
+
+
+.orbit-container .orbit-slide-number {
+/*position: absolute;*/
+top: 10px;
+left: 10px;
+font-size: 12px;
+color: #FFFFFF;
+background: transparent;
+ z-index: 0;
+
+}
+.orbit-container .orbit-timer .orbit-progress {
+height: 3px;
+/* background-color: rgba(255, 255, 255, 0.3); */
+display: block;
+width: 0;
+/*position: relative;*/
+right: 20px;
+top: 5px;
+}
+
+.orbit-container .orbit-timer {
+/*position: absolute;*/
+top: 12px;
+right: 10px;
+height: 6px;
+width: 100px;
+/*z-index: 10;*/
+}
+.orbit-container{
+  width: 69%;
+  margin: 4% 20% 0% 16%;
+}
+
+.orbit-prev{
+	background-image: url(../images/left.png);
+	margin-left:0px;
+	
+	
+}
+.orbit-next{
+	background-image: url(../images/right.png);
+	margin-right: 0px;
+		
+}
+
+
+.slider-nav li{
+  
+  list-style-type: none;
+}
+
+.slider-nav li img{
+	
+	margin:30px 50px;
+}
+.client_thoughts{
+	
+	background-color: #F9F9F9;
+
+}
+.client_thoughts .description{
+	margin: 3% 6% 0% 15%;
+  width: 69%;
+
+}
+.description h5{
+	font-family: "opensans-BoldItalic";
+  font-size: 12pt;
+}
+.client_thoughts h1{
+	color:#007BE1;
+	font-family: "museo500"; 
+  font-size: 18pt;
+
+}
+.client_thoughts h4{
+	color:#5C5C5C;
+	font-family: "opensans-regular"; 
+	font-size: 12pt;
+
+}
+.button{
+	float: right;
+	width: 120px;
+	height: 20px;
+	top:-54px;
+}
+.button h2{
+	color: #fff;
+	font-size: 12px;
+	line-height: 0;
+	text-transform: uppercase;
+
+}
+.more_projects{
+	background-image: url(../images/more-projects.png);
+}
+.description h5{
+	color: #5C5C5C;
+	font-family: "OpenSans-Italic";
+}
+.more_projects h1{
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	font-size: 20px;
+	font-family: "museo_sans900";
+	line-height: 2em;
+	margin-bottom: 0;
+
+}
+.hover_projects li{
+	padding: 0;
+	margin: 0;
+	top:-40px;
+	
+	
+}
+/***********************Work-inner****************************************/
+
+.contact {
+  background-image: url(../images/contact_bck.png);
+  background-repeat: no-repeat;
+  background-position: 0 -24px;
+  top: 5.8%;
+  position: relative;
+  background-size: cover;
+
+}
+
+.contact_form{
+  width: 59%;
+  font-family: "opensans-regular";
+  font-size: 18px;
+  margin-left: 24%;
+  margin-top: 2%;
+ }
+
+
+.formhr{
+  background-image: url(../images/hr.png);
+}
+
+.contact input{
+  background: transparent;
+  border-style: none;
+}
+.contact h1{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "museo_sans900";
+  color: #0079dd;
+  margin-top: 2%;
+}
+.contact h4{
+  text-align: center;
+  font-family: "museo500";
+  color: #fff;
+  width: 44%;
+  margin: -2% 0 0 29%;
+
+}
+.contact_form h5{
+  font-family: "opensans-regular";
+  font-size: 18px;
+  color:#9E9E9E;
+}
+.last{
+  text-align: center;
+}
+
+.btn{
+  margin: 21% 42% 0 0;
+  text-align: center;
+}
+
+.button.small {
+padding-top: 0.999rem;
+padding-right: 1.75rem;
+padding-bottom: 0.9999rem;
+padding-left: 1.75rem;
+font-size: 0.8125rem;
+background-color: #F3560D;
+
+}
+.btn h6{
+  color:#fff;
+  font-family:"museo900";
+  text-align: center;
+  margin-top: -13%;
+}
+#map-canvas {
+  width: 100%;
+  height: 100%;
+  background-color: #CCC;
+  margin-top: 40px;
+}
