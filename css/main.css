@@ -1,69 +1,69 @@
 
 @font-face{
-	font-family: museo100;
-	src:url("../Fonts/Museo/Museo100-Regular.otf");
+  font-family: museo100;
+  src:url("../Fonts/Museo/Museo100-Regular.otf");
 }
-@font-face{	font-family: museo300;
-	src:url("../Fonts/Museo/Museo300-Regular.otf");
+@font-face{ font-family: museo300;
+  src:url("../Fonts/Museo/Museo300-Regular.otf");
 }
-@font-face{	font-family: museo500;
-	src:url("../Fonts/Museo/Museo500-Regular.otf");
-}
-@font-face{
-	font-family: museo700;
-	src:url("../Fonts/Museo/Museo700-Regular.otf");
+@font-face{ font-family: museo500;
+  src:url("../Fonts/Museo/Museo500-Regular.otf");
 }
 @font-face{
-	font-family: museo900;
-	src:url("../Fonts/Museo/Museo900-Regular.otf");
+  font-family: museo700;
+  src:url("../Fonts/Museo/Museo700-Regular.otf");
 }
 @font-face{
-	font-family: museo_sans900;
-	src:url("../Fonts/Museo Sans/exljbris - MuseoSans-900.otf");
+  font-family: museo900;
+  src:url("../Fonts/Museo/Museo900-Regular.otf");
 }
 @font-face{
-	font-family: museo_sans500;
-	src:url("../Fonts/Museo Sans/MuseoSans_500.otf");
+  font-family: museo_sans900;
+  src:url("../Fonts/Museo Sans/exljbris - MuseoSans-900.otf");
 }
 @font-face{
-	font-family: opensans-regular;
-	src:url("../Fonts/Open Sans/OpenSans-Regular.ttf");
+  font-family: museo_sans500;
+  src:url("../Fonts/Museo Sans/MuseoSans_500.otf");
 }
 @font-face{
-	font-family: opensans-Bold;
-	src:url("../Fonts/Open Sans/OpenSans-Bold.ttf");
+  font-family: opensans-regular;
+  src:url("../Fonts/Open Sans/OpenSans-Regular.ttf");
 }
 @font-face{
-	font-family: opensans-BoldItalic;
-	src:url("../Fonts/Open Sans/OpenSans-BoldItalic.ttf");
+  font-family: opensans-Bold;
+  src:url("../Fonts/Open Sans/OpenSans-Bold.ttf");
 }
 @font-face{
-	font-family: OpenSans-ExtraBold;
-	src:url("../Fonts/Open Sans/OOpenSans-ExtraBold.ttf");
+  font-family: opensans-BoldItalic;
+  src:url("../Fonts/Open Sans/OpenSans-BoldItalic.ttf");
 }
 @font-face{
-	font-family: OpenSans-ExtraBoldItalic;
-	src:url("../Fonts/Open Sans/OpenSans-ExtraBoldItalic.ttf");
+  font-family: OpenSans-ExtraBold;
+  src:url("../Fonts/Open Sans/OOpenSans-ExtraBold.ttf");
 }
 @font-face{
-	font-family: OpenSans-Italic;
-	src:url("../Fonts/Open Sans/OpenSans-Italic.ttf");
+  font-family: OpenSans-ExtraBoldItalic;
+  src:url("../Fonts/Open Sans/OpenSans-ExtraBoldItalic.ttf");
 }
 @font-face{
-	font-family: OpenSans-Light;
-	src:url("../Fonts/Open Sans/OpenSans-Light.ttf");
+  font-family: OpenSans-Italic;
+  src:url("../Fonts/Open Sans/OpenSans-Italic.ttf");
 }
 @font-face{
-	font-family: OpenSans-LightItalic;
-	src:url("../Fonts/Open Sans/OpenSans-LightItalic.ttf");
+  font-family: OpenSans-Light;
+  src:url("../Fonts/Open Sans/OpenSans-Light.ttf");
 }
 @font-face{
-	font-family: OpenSans-Semibold;
-	src:url("../Fonts/Open Sans/OpenSans-Semibold.ttf");
+  font-family: OpenSans-LightItalic;
+  src:url("../Fonts/Open Sans/OpenSans-LightItalic.ttf");
 }
 @font-face{
-	font-family: OpenSans-SemiboldItalic;
-	src:url("../Fonts/Open Sans/OpenSans-SemiboldItalic.ttf"); 
+  font-family: OpenSans-Semibold;
+  src:url("../Fonts/Open Sans/OpenSans-Semibold.ttf");
+}
+@font-face{
+  font-family: OpenSans-SemiboldItalic;
+  src:url("../Fonts/Open Sans/OpenSans-SemiboldItalic.ttf"); 
 
 }
 /*************FONT FACE**************************************/
@@ -81,75 +81,111 @@ body{
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 text-rendering: optimizeLegibility;
+overflow: scroll;
 }
 .header{
-	height: 80px;
+  height: 80px;
 }
 .logo{
-	margin: 15px 20px 0 20px;
+margin: 12px 20px 0 5px;
+/* height: 9%; */
+width: 80px;
   
-	
-}
-.menu{
-	margin: 2% 0% 0 0%;
-  width:11%;
-  height: 22%;
+  
 }
 
+.menu {
+  margin-top: 4px;
+width: 68px;
+ /* height: 22%;*/
+}
+.menu-name h2{
+color: #0079dd;
+font-size: 0.7em;
+font-family: 'Open Sans', sans-serif;
+/*font-weight: 500px;*/
+/*float: right;*/
+text-transform: uppercase;
+margin: 0 0 0 0;
+}
+.menu-name h2:hover{
+  color:#00003b;
+
+
+}
+@media only screen and (max-width: 768px){
+.menu-name h2 {
+    float: right;
+    margin: 25px -11 0 0 !important;}
+}
+/*@media only screen and (min-width: 128px) {
+  .menu {
+
+    margin:2% 0% 0% 0%;
+  }*/
+
+/*@media only screen and (min-width: 40px) {
+  .menu {
+
+    margin:5% 0% 0% 0%;
+  }*/
 .navigation-wrapper {
-	background: -webkit-linear-gradient(#002a67, #0079dd); /* For Safari 5.1 to 6.0 */
- 	background: -o-linear-gradient(#002a67, #0079dd); /* For Opera 11.1 to 12.0 */
+  background: -webkit-linear-gradient(#002a67, #0079dd); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#002a67, #0079dd); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#002a67, #0079dd); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#002a67, #0079dd); /* Standard syntax */
-	padding: 40px 0 0 0;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 900;
-	display: none;
+  padding: 40px 0 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 900;
+  display: none;
 }
 
 .navigation {
-	padding: 20px 5% 0 5%;
-	display: none;
+  padding: 20px 5% 0 5%;
+  display: none;
 }
 
 .show-menu {
-	display: block;
+  display: block;
 }
 
 
 .navigation li {
-	list-style: none;
-	margin: 50px 0;
-	transition: all ease .6s;
+  list-style: none;
+  margin: 50px 0;
+
 } 
 .navigation li.small-padding {
-	margin: 0;
+  margin: 0;
   }
 
 .navigation li a {
-	display: block;
-	padding: 10px 0 10px 1%;
-	color: #fff;
-	text-decoration: none;
-	font-size: 150%;
-	letter-spacing: .1em;
-	border-left: 3px solid #fff;
-	opacity: 0.95;
-	-moz-transition: all ease .3s;
-	-webkit-transition: all ease .3s;
-	-ms-transition: all ease .3s;
-	-o-transition: all ease .3s;
-	transition: all ease .3s;
+  display: block;
+  padding: 10px 0 10px 1%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 150%;
+  letter-spacing: .1em;
+  border-left: 3px solid #fff;
+   -webkit-transition: .4s linear; 
+    -moz-transition: .4s linear; 
+    transition: .4s linear;
+  opacity: 0.95;
+  -moz-transition: all ease .3s;
+  -webkit-transition: all ease .3s;
+  -ms-transition: all ease .3s;
+  -o-transition: all ease .3s;
+  transition: all ease .3s;
 }
 
 .navigation li a:hover {
-	color: #fff;
-	padding-left: 5%;
-	border-left: 3px solid #eee;
+  color: #fff;
+  padding-left: 5%;
+  border-left: 3px solid #eee;
 }
 
 
@@ -158,7 +194,7 @@ text-rendering: optimizeLegibility;
   top: 0%;
   left: 0;
   width:100vw;
-  height: 30vh;
+  height: 20vh;
   /*background: rgba(2, 23, 37, 0.95);
   height: 50px;
   width: 100%;*/
@@ -186,9 +222,9 @@ text-rendering: optimizeLegibility;
   .cd-header.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
-    top: -80px;
+    top: -60px;
     background-color: #fff;
-    opacity: 0.85;
+    opacity: 0.95;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
@@ -210,7 +246,7 @@ text-rendering: optimizeLegibility;
 
 @media only screen and (min-width: 168px) {
   .cd-header {
-    height: 80px;
+    height: 60px;
     background: transparent;
     -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -232,7 +268,7 @@ text-rendering: optimizeLegibility;
   
   position: absolute;
   z-index: 1000;
-  left: 50%;
+  left: 70%;
   top: 50%;
   bottom: auto;
   right: auto;
@@ -249,8 +285,8 @@ text-rendering: optimizeLegibility;
   /* this span is the central line of the menu icon */
   display: inline-block;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  /*left: 70%;*/
+  top: 11px;
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(50%) translateY(-50%);
@@ -258,7 +294,7 @@ text-rendering: optimizeLegibility;
   -ms-transform: translateX(50%) translateY(-50%);
   -o-transform: translateX(50%) translateY(-50%);
   transform: translateX(50%) translateY(-50%) ;
-  width: 28px;
+  width: 32px;
   height: 3px;
   background-color: #0079dd;
   -webkit-transition: background-color 0.3s;
@@ -316,8 +352,8 @@ text-rendering: optimizeLegibility;
 
 .white_logo img{
   visibility: visible;
-	float: left;
-  margin: -36px 35px;
+  float: left;
+  margin: -2% 2%;
 
 }
 
@@ -345,13 +381,14 @@ text-rendering: optimizeLegibility;
   
   .cd-primary-nav-trigger .cd-menu-icon {
     left: auto;
-    right: -3em;
+    right: -1em;
     -webkit-transform: translateX(0) translateY(-50%);
     -moz-transform: translateX(0) translateY(-50%);
     -ms-transform: translateX(0) translateY(-50%);
     -o-transform: translateX(0) translateY(-50%);
     transform: translateX(0) translateY(-50%);
   }
+
 }
 
 .cd-primary-nav {
@@ -387,8 +424,8 @@ text-rendering: optimizeLegibility;
   transition-duration: 0.4s;
 }
 .cd-primary-nav ul {
-	width: 100%;
-	left: 0;
+  width: 100%;
+  left: 0;
   margin: 5% 0% 0% 1%;
 }
 .cd-primary-nav li {
@@ -431,14 +468,15 @@ text-rendering: optimizeLegibility;
 /****************************************Nav bar****************************************/
 
 .pic_holder{
-	margin-bottom: 0%;
+  margin-bottom: 0%;
+  width: 100%;
 }
 .pic_holder ul li{
-	padding: 0% 0% 0% 0%;
-	position: relative;
-	overflow: hidden;
-	margin: 0% 0% 0% 0%;
-	display: inline-block;
+  padding: 0% 0% 0% 0%;
+  position: relative;
+  overflow: hidden;
+  margin: 0% 0% 0% 0%;
+  display: inline-block;
 
 }
 ul.img-list {
@@ -490,14 +528,14 @@ ul.img-list li:hover span.text-content {
 
 
 .head_name{
-	font-family: "museo_sans900";
-	font-weight: 400;
-	font-size: 40px;
-	line-height: 1;
-	word-wrap:break-word;
-	margin: 54% 7% 0% 5%;
+  font-family: "museo_sans900";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1;
+  word-wrap:break-word;
+  margin: 54% 7% 0% 5%;
   text-transform: uppercase;
-	-webkit-transform: translateZ(-30px);
+  -webkit-transform: translateZ(-30px);
 -moz-transform: translateZ(-30px);
 -ms-transform: translateZ(-30px);
 -o-transform: translateZ(-30px);
@@ -517,93 +555,148 @@ transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
   margin: 0% 7% 0% 5%;
 }
 .show_more{
-	background-image: url(../images/more-projects.png);
-	width: 100%;
-	height: 43px;
-	margin:0;
-	padding: 0;
+  background-image: url(../images/more-projects.png);
+  width: 100%;
+  height: 43px;
+  margin:0;
+  padding: 0;
 }
 .show_more h2{
-	font-family: "museo_sans900";
-	text-align: center;
-	color:#fff;
-	font-size: 18px;
-	text-transform: uppercase;
-	line-height: 2.5em;
-	margin-top: 0;
+  font-family: "museo_sans900";
+  text-align: center;
+  color:#fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 2.5em;
+  margin-top: 0;
 }
 .clients{
-	padding-top: 30px;
+  padding-top: 30px;
 }
 .clients h1{
-	font-size: 30px;
-	font-weight: bold;
-	margin-top: 36px;
-	font-family: "museo_sans900";
-	color:#007BE1;
-	text-align: center;
-	text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 36px;
+  font-family: "museo_sans900";
+  color:#007BE1;
+  text-align: center;
+  text-transform: uppercase;
 }
 .clients h4{
-	color:#5C5C5C;
-	font-family: "museo900";
-	text-decoration: none;
-	font-size: 18px;
-	font-weight: normal;
-	text-align: center;
-	line-height:0em; 
+  color:#5C5C5C;
+  font-family: "museo900";
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  line-height:0em; 
 }
 .client_logo{
-	text-align: center;
-	margin: 33px 102px 13px 102px;
+  text-align: center;
+  margin: 33px 102px 13px 102px;
 }
 
 /*******************************FOOTER***************************************/
 
 
 .footer{
-	background-image: url(../images/footer_bck.png);
-	height: 200px;
+  background-image: url(../images/footer_bck.png);
+  height: auto;
+  width: 100%;
 
 }
+
 .footer_logo{
-	margin:48px auto auto;
-	position: relative;
-    left: 50%;
-    transform: translate(-50%, -50%) }
+
+position: relative;
+left: 0;
+right: 0;
+margin-left: 43%;
+margin-top: 2%;
+
 
 }
 
 .line{
-	background-image: url(../images/footer_line.png);
-	margin: 48px auto auto;
-	position: relative;
-	left: 50%;
-	width: 60%;
-	transform: translate(-50%, -50%);
+  background-image: url(../images/footer_line.png) ;
+  margin: 52px auto auto;
+  position: relative;
+  left: 50%;
+  width: 60%;
+  /*transform: translate(-50%, -50%);*/
 }
 
 .footer_list li{
-	float: right;
-	margin-right: 86px;
-	padding-top: 10px;
-	
+  float: right;
+  list-style-type: none;
+  margin-right: 66px;
+  padding-top: 10px;
+  
 }
 .footer_list li a {
-	text-decoration: none;
-	color: #fff;
-	font-size: 11px;
-	font-family: "museo_sans900";
+  text-decoration: none; 
+  color: #fff;
+  font-size: 11px;
+  font-family: "museo_sans900";
 }
-.footer-text{
-	text-decoration: none;
-	color: #fff;
-	font-size: 12px;
-	margin-left: 85px;
-	padding-top: 12px;
+.footer-text h4{
+text-decoration: none;
+font-family: 'Open Sans', sans-serif;
+color: #fff;
+font-size: 12px;
+margin-left: 85px;
+margin-top: -3%;
+ 
 
 }
+@media only screen and (min-width: 768px) {
+  .footer_list li {
+    float: right;
+  list-style-type: none;
+  margin-right: 66px;
+  padding-top: 10px;
 
+  }
+  .footer-text h4{
+text-decoration: none;
+font-family: 'Open Sans', sans-serif;
+color: #fff;
+font-size: 12px;
+margin-left: 85px;
+margin-top: -3%;
+ 
+}
+.footer{
+  height: 220px;
+}
+.footer_list{
+  float: right;
+}
+}
+@media only screen and (max-width: 768px) {
+  .footer_list li {
+    float: right;
+  list-style-type: none;
+  margin-right: 66px;
+  padding-top: 10px;
+
+  }
+  .footer-text h4{
+text-decoration: none;
+font-family: 'Open Sans', sans-serif;
+color: #fff;
+font-size: 12px;
+margin-left: 85px;
+margin-top: -3%;
+ 
+}
+.footer{
+  height: 300px;
+}
+.footer_list{
+  float: right;
+}
+}
 /*******************************FOOTER***************************************/
 .work-wrap{
   top:-10%;
@@ -614,19 +707,19 @@ transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
   }
 }
 .heading{
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 26pt;
-	font-family: "museo_sans900";
-	color:#007BE1;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 26pt;
+  font-family: "museo_sans900";
+  color:#007BE1;
 
 }
 .sub-heading{
-	color:#5C5C5C;
-	font-size: 18px;
-	text-align: center;
-	line-height: 0em;
-	font-family: "museo500";
+  color:#5C5C5C;
+  font-size: 18px;
+  text-align: center;
+  line-height: 0em;
+  font-family: "museo500";
 
 }
 /*.orbit-container .orbit-prev,
@@ -635,7 +728,7 @@ transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
     top: 45%;
     margin-top: -25px;
     width: 70px;
-	  height: 68px;
+    height: 68px;
     line-height: 50px;
     color: white;
     background-color: transparent;
@@ -729,18 +822,18 @@ width: 0px;
 }
 
 .orbit-prev:hover{
-	background-image: url(../images/left.png);
+  background-image: url(../images/left.png);
   -webkit-transition: .2s linear; 
     -moz-transition: .2s linear; 
-    transition: .2s linear; 	
-	
+    transition: .2s linear;   
+  
 }
 .orbit-next:hover{
-	background-image: url(../images/right.png);
+  background-image: url(../images/right.png);
   -webkit-transition: .2s linear; 
     -moz-transition: .2s linear; 
     transition: .2s linear; 
-			
+      
 }
 
 
@@ -750,90 +843,95 @@ width: 0px;
 }
 
 .slider-nav li img{
-	
-	margin:30px 50px;
+  
+  margin:30px 50px;
 }
 .client_thoughts{
-	
-	background-color: #F9F9F9;
+  
+  background-color: #F9F9F9;
 
 }
 .client_thoughts .description{
-	margin: 3% 6% 0% 15%;
+  margin: 3% 6% 0% 15%;
   width: 69%;
 
 }
 .description h5{
-	font-family: "opensans-BoldItalic";
+  font-family: 'Open Sans', sans-serif;
   font-size: 12pt;
 }
 .client_thoughts h1{
-	color:#007BE1;
-	font-family: "museo500"; 
+  color:#007BE1;
+  font-family: "museo500"; 
   font-size: 18pt;
 
 }
 .client_thoughts h4{
-	color:#5C5C5C;
-	font-family: "opensans-regular"; 
-	font-size: 12pt;
+  color:#5C5C5C;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
 
 }
 .button{
-	float: right;
-	width: 120px;
-	height: 30px;
-	top:-64%;
+float: none;
+width: 120px;
+height: 30px;
+top: 0px;
+margin-right: -7px;
 }
 .button h2{
-	color: #fff;
-	font-size: 12px;
-	line-height: 1.5em;
-	text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.5em;
+  text-transform: uppercase;
 
 }
 .more_projects{
-	background-image: url(../images/more-projects.png);
+  background-image: url(../images/more-projects.png);
   width: 120%;
   margin: 0 -3% 0% -8%;
 }
 .description h5{
-	color: #5C5C5C;
-	font-family: "OpenSans-Italic";
+  color: #5C5C5C;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
 }
 .more_projects h1{
-	color: #fff;
-	text-align: center;
-	text-transform: uppercase;
-	vertical-align: middle;
-	font-size: 20px;
-	font-family: "museo_sans900";
-	line-height: 1.5em;
-	margin-bottom: 0;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-size: 20px;
+  font-family: "museo_sans900";
+  line-height: 1.5em;
+  margin-bottom: 0;
 
 }
 .hover_projects li{
-	padding: 0;
-	margin: 0;
-	top:-40px;
-	
-	
+  padding: 0;
+  margin: 0;
+  top:-40px;
+  
+  
 }
 /***********************Work-inner****************************************/
 
 .contact {
-  background-image: url(../images/contact_bck.png);
-  background-repeat: no-repeat;
+  background-image: url(../images/contact_bck.png) ;
+ background-repeat: no-repeat;
   background-position: 0 -24px;
   top: 5.8%;
+  right: 0;
   position: relative;
-  background-size: cover;
-
+  -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 }
 
 .contact_form{
   width: 59%;
-  font-family: "opensans-regular";
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   margin-left: 24%;
   margin-top: 2%;
@@ -864,7 +962,7 @@ width: 0px;
 
 }
 .contact_form h5{
-  font-family: "opensans-regular";
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   color:#9E9E9E;
 }
@@ -873,7 +971,7 @@ width: 0px;
 }
 
 .btn{
-  margin: 21% 42% 0 0;
+ /* margin: 21% 42% 0 0;*/
   text-align: center;
 
 }
@@ -896,7 +994,7 @@ background-color: #F3560D;
 }
 #map-canvas {
   width: 100%;
-  height: 100%;
+  height: 120%;
   background-color: #CCC;
   margin-top: 40px;
 }
@@ -905,21 +1003,28 @@ background-color: #F3560D;
 
 .wrap h1{
   font-family: "museo_sans900";
-  font-size: 5vw;
+  font-size: 3em;
   text-align: center;
   text-transform: uppercase;
   color: #0079dd; 
   line-height: 0;
+ 
+
 }
 .wrap h5{
   font-family: "museo500";
   font-size: 18pt;
   text-align: center;
   color: #9E9E9E;
-  line-height: 1;
+  line-height: 1vw;
 }
 
 
+
+.capabilities ul{
+  height: auto;
+  width: auto;
+}
 .capabilities ul li{
  padding: 7% 0% 0% 2%;
 /*position: relative;*/
@@ -932,8 +1037,102 @@ width: 32vw;
 /*position: relative;*/
 
 }
+
+@media only screen and (max-width: 767px) {
+.capabilities ul li{
+ padding: 7% 0% 0% 2%;
+overflow: hidden;
+display: inline-block;
+background-color: #002B69;
+height: auto;
+width: 90vw;
+margin-bottom: 2%;
+margin-left: 5%;
+
+
+}
+.cap-content h2{
+  font-size: 3.3vw !important;
+}
+.capabilities ul li h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.2vw !important;
+   -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  text-align: center;
+  color: #fff;
+  line-height: 1.5;
+  font-weight: 500;
+ 
+}
+.cap-content {
+
+margin: 1% 2% 0 0% !important;
+padding: 0 3% !important;
+}
+
+.cap-list p{
+   margin-top: 15%;
+  margin-left: 35%;
+  padding-top: 5%;
+  line-height: 0;
+}
+
+.capabilities li:hover > .cap-list {
+ 
+  background-color: #00003b;
+height: auto;
+width: 90vw;
+/*margin-top: 52%;
+margin-left: 5%;*/
+ 
+
+}
+
+ .capabilities li:hover >.cap-list p{
+  opacity: 1;
+ 
+  
+}
+
+.capabilities li:hover > .svg-wrap{
+  opacity: 0.5;
+
+}
+
+.svg-wrap {
+margin: 0% 0% 0% 0% !important;
+}
+ 
+.wrap h1{
+  font-family: "museo_sans900";
+  font-size: 5vw !important;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0079dd; 
+  line-height: 0;
+ 
+
+}
+.wrap h5{
+  font-family: "museo500";
+  font-size: 2.8vw !important;
+  text-align: center;
+  color: #9E9E9E;
+  line-height: 1.5vw !important;
+}
+
+.menu-full{
+ margin-right: 12px;
+}
+
+}
+
+
+
 .capabilities-wrap{
-  margin: 3% 1.5% 0% 2.5%;
+  margin: 1.5% 1.5% 0% 2.5%;
 }
 .svg-wrap{
   margin: 1% 2% 3% 6%;
@@ -946,14 +1145,15 @@ width: 32vw;
   text-transform: uppercase;
 }
 .capabilities ul li h6 {
-  font-family: "opensans-regular";
-  font-size: 1vw;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.25vw;
    -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   text-align: center;
   color: #fff;
   line-height: 1.5;
+  font-weight: 500;
  
 }
 .cap-content{
@@ -964,23 +1164,6 @@ width: 32vw;
 }
 
 
-/*.cap-list ul{
-  display: list-item;
-  position: relative;
-    
-}
-
-.cap-list ul li{
- opacity: 0;
-list-style-type: none;
-position:absolute;
-color: #fff;
-font-size: 1.5vw;
-/*margin: 1% 2% 3% 4%;*/
-/*transition-property: opacity;
-transition-duration: .3s;
-}
-*/
 
 
 .cap-list p{
@@ -990,18 +1173,19 @@ transition-duration: .3s;
  /* line-height:2.2;*/
   color:#fff;
   font-size:1.5vw;
-  font-family: "opensans-regular";
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  
   
  
 
 
 }
 .capabilities li:hover > .cap-list {
-  /*opacity: 1;*/
+ 
   background-color: #00003b;
   height: 700px;
   width: 430px;
@@ -1012,12 +1196,15 @@ transition-duration: .3s;
 
  .capabilities li:hover >.cap-list p{
   opacity: 1;
-  /*background-color: #00003b;*/
+  
   top:30%;
   
 }
 
+.capabilities li:hover > .svg-wrap{
+  opacity: 0.5;
 
+}
  
 .cap-list  p:nth-of-type(1){
      -webkit-transition-delay:0.3s;
@@ -1173,8 +1360,8 @@ transition-duration: .3s;
 
 
 .spiral {
-  -webkit-animation: spiral  7s;
-  animation: spiral 7s ;
+  -webkit-animation: spiral  2s;
+  animation: spiral 2s ;
 }
 
 
@@ -1222,3 +1409,17 @@ transition-duration: .3s;
 }
 
 /*****************************End of SVG**************************/
+@media only screen and (max-width: 960px) {
+  #Layer_1 {
+      width: 150px;
+      /*height: 150px;*/
+      margin: 1% 2% 4% 30%;
+     /* vertical-align: middle;*/
+
+     
+      
+  }
+
+
+  
+}
