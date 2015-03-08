@@ -1,4 +1,4 @@
-
+/*************FONT FACE**************************************/
 @font-face{
   font-family: museo100;
   src:url("../Fonts/Museo/Museo100-Regular.otf");
@@ -66,14 +66,28 @@
   src:url("../Fonts/Open Sans/OpenSans-SemiboldItalic.ttf"); 
 
 }
-/*************FONT FACE**************************************/
+/******** Primary style***************/
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/******** Primary style***************/
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  /* etc */}
+  p{
+    margin: 0;
+    padding: 0;
+  }
+
+/***************HTML5 display********************/
+header, footer, nav {
+  display: block;
+}
+
 
 body{
   -ms-text-size-adjust: 100%;
@@ -83,6 +97,9 @@ body{
 text-rendering: optimizeLegibility;
 overflow: scroll;
 }
+
+
+/****************************************Nav bar****************************************/
 .header{
   height: 80px;
 }
@@ -109,27 +126,61 @@ text-transform: uppercase;
 margin: 0 0 0 0;
 
 }
-.menu-name h2:hover{
+@media only screen and (max-width: 667px){
+.menu-full{
+ margin-right: 12px;
+}
+}
+/*.menu-name h2:hover{
   color:#00003b;
 
-}
+}*/
 
 @media only screen and (max-width: 768px){
 .menu-name h2 {
     float: right;
     margin: 25px -11 0 0 !important;}
+
+
+  .cd-header {
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .cd-header.is-fixed {
+    /* when the user scrolls down, we hide the header right above the viewport */
+    position: fixed;
+    top: -60px;
+    background-color: #fff;
+    opacity: 0.95;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+  }
+  .cd-header.is-visible {
+    /* if the user changes the scrolling direction, we show the header */
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  .cd-header.menu-is-open {
+    /* add a background color to the header when the navigation is open */
+    background-color:  #002a67 solid;
+  }
 }
-/*@media only screen and (min-width: 128px) {
-  .menu {
 
-    margin:2% 0% 0% 0%;
-  }*/
 
-/*@media only screen and (min-width: 40px) {
-  .menu {
-
-    margin:5% 0% 0% 0%;
-  }*/
 .navigation-wrapper {
   background: -webkit-linear-gradient(#002a67, #0079dd); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#002a67, #0079dd); /* For Opera 11.1 to 12.0 */
@@ -330,7 +381,6 @@ margin: 0 0 0 0;
 
 }
 
-
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before, .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
   background-color: #fff;
 }
@@ -468,8 +518,8 @@ margin: 0 0 0 0;
   transform: translateY(0);
 }
 
-/****************************************Nav bar****************************************/
-
+/****************************************End of Nav bar****************************************/
+/*************************WORK/Portfolio********************************/
 .pic_holder{
   margin-bottom: 0%;
   width: 100%;
@@ -598,13 +648,13 @@ transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
   text-align: center;
   margin: 33px 102px 13px 102px;
 }
-
+/*****************************End of Work/ Portfolio*************************/
 /*******************************FOOTER***************************************/
 
 
 .footer{
   background-image: url(../images/footer_bck.png);
-  height: auto;
+  height: 40%;
   width: 100%;
 
 }
@@ -614,21 +664,16 @@ transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
 position: relative;
 left: 0;
 right: 0;
-margin-left: 43%;
+margin-left: 49%;
 margin-top: 2%;
 
 
 }
 
-.line{
-  background-image: url(../images/footer_line.png) ;
-  margin: 52px auto auto;
-  position: relative;
-  left: 50%;
-  width: 60%;
-  /*transform: translate(-50%, -50%);*/
+.footer_line{
+  margin-top: 15px;
+  margin-left: 2%;
 }
-
 .footer_list li{
   float: right;
   list-style-type: none;
@@ -700,7 +745,8 @@ margin-top: -3%;
   float: right;
 }
 }
-/*******************************FOOTER***************************************/
+/*******************************End of FOOTER***************************************/
+/************************WORK-Inner**************************************/
 .work-wrap{
   top:-10%;
 }
@@ -725,19 +771,7 @@ margin-top: -3%;
   font-family: "museo500";
 
 }
-/*.orbit-container .orbit-prev,
-.orbit-container .orbit-next {
-    position: absolute;
-    top: 45%;
-    margin-top: -25px;
-    width: 70px;
-    height: 68px;
-    line-height: 50px;
-    color: white;
-    background-color: transparent;
-    text-indent: -9999px !important;
-    z-index: 1; 
-  }*/
+
 
     .orbit-container .orbit-prev,
   .orbit-container .orbit-next {
@@ -755,18 +789,7 @@ margin-top: -3%;
     transition: .4s linear; 
       
   /*  z-index: 10; */}
-   /* .orbit-container .orbit-prev:hover,
-    .orbit-container .orbit-next:hover {
-      background-color: rgba(0, 0, 0, 0.3); }
-    .orbit-container .orbit-prev > span,
-    .orbit-container .orbit-next > span {
-     /* position: absolute;*/
-     /* top: 50%;
-      margin-top: -10px;
-      display: block;
-      width: 0;
-      height: 0;*/
-     /* border: inset 10px;*/ }
+ }
   .orbit-container .orbit-prev {
     left: 0%; }
     .orbit-container .orbit-prev > span {
@@ -796,9 +819,7 @@ margin-top: -3%;
 top: 10px;
 left: 10px;
 font-size: 0px;
-/*color: #FFFFFF;
-background: transparent;
-/* z-index: 0;*/
+
 
 }
 .orbit-container .orbit-timer .orbit-progress {
@@ -917,12 +938,13 @@ margin-right: -7px;
   
   
 }
-/***********************Work-inner****************************************/
+/***********************End of Work-inner****************************************/
+/******************************Contact*******************************/
 
 .contact {
   background-image: url(../images/contact_bck.png) ;
  background-repeat: no-repeat;
-  background-position: 0 -24px;
+ /* background-position: 0 -24px;*/
   top: 5.8%!important;
   right: 0;
   position: relative;
@@ -931,7 +953,7 @@ margin-right: -7px;
         -o-background-size: cover;
         background-size: cover;
   padding: 0 0 0 0;
-  margin: 0 0 0 0 ;
+  margin: -5px 0 0 0 ;
 }
 
 .contact_form{
@@ -976,7 +998,7 @@ margin-right: -7px;
 }
 
 .btn{
- /* margin: 21% 42% 0 0;*/
+  margin: -2% 1% 54px 0;
   text-align: center;
 
 }
@@ -1004,7 +1026,8 @@ background-color: #F3560D;
   margin-top: 30px!important;
 }
 
-/******************************CONTACT****************************************/
+/******************************End of CONTACT****************************************/
+/*****************Capabilities************************/
 
 .wrap h1{
   font-family: "museo_sans900";
@@ -1024,12 +1047,6 @@ background-color: #F3560D;
   line-height: 1vw;
 }
 
-
-
-.capabilities ul{
-  height: auto;
-  width: auto;
-}
 .capabilities ul li{
  padding: 6% 0% 0% 2%;
 /*position: relative;*/
@@ -1049,7 +1066,7 @@ width: 32vw;
 overflow: hidden;
 display: inline-block;
 background-color: #002B69;
-height: 200vh;
+height: 100vh;
 width: 90vw;
 margin-bottom: 2%;
 margin-left: 5%;
@@ -1125,9 +1142,7 @@ margin: 0% 0% 0% 0% !important;
   line-height: 1.5vw !important;
 }
 
-.menu-full{
- margin-right: 12px;
-}
+
 
 }
 
@@ -1225,7 +1240,9 @@ margin: 0% 0% 0% -7% !important;
 /********************End of media query for (min-width: 668px)and (max-width: 968px)**********************/
 
 .capabilities-wrap{
-  margin: 1.5% 1.5% 0% 2.4%;
+  margin: 1.5% auto 0 auto;
+margin-left: 2.3%;
+overflow: hidden;
 }
 .svg-wrap{
   margin: 1% 2% 3% 6%;
@@ -1373,12 +1390,23 @@ margin: 0% 0% 0% -7% !important;
   100% {
     stroke-dasharray:790 0;
   }
+
+}
+@-moz-keyframes tech {
+  0% {
+    stroke-dasharray:0 790;
+  }
+  100% {
+    stroke-dasharray:790 0;
+  }
+  
 }
 
 
 .tech {
   -webkit-animation: tech  7s;
   animation: tech 7s ;
+   -moz-animation: tech  7s;
 }
 
 
@@ -1515,4 +1543,5 @@ margin: 0% 0% 0% -7% !important;
 
 
   
-}
+
+/*************************End of Capabilities*************************/
