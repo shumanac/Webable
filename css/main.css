@@ -110,7 +110,7 @@ width: 80px;
 }
 
 .menu {
-  margin-top: 4px;
+   margin-top: 0.5em;
 width: 68px;
  /* height: 22%;*/
 }
@@ -121,7 +121,7 @@ font-family: 'Open Sans', sans-serif;
 /*font-weight: 500px;*/
 /*float: right;*/
 text-transform: uppercase;
-margin: 0 0 0 0;
+margin: 6px 0 0 0;
 
 }
 @media only screen and (max-width: 667px){
@@ -138,7 +138,8 @@ margin: 0 0 0 0;
 @media only screen and (max-width: 768px){
 .menu-name h2 {
     float: right;
-    margin: 25px -11 0 0 !important;}
+    margin: 27px -11 0 0 !important
+  }
 
 
   .cd-header {
@@ -179,9 +180,7 @@ margin: 0 0 0 0;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1169px){
-.menu-name h2 {
-    float: right;
-    margin: 2px 5px 0 0 !important;}
+
 
 
   .cd-header {
@@ -358,7 +357,7 @@ margin: 0 0 0 0;
   position: absolute;
   z-index: 1000;
   left: 70%;
-  top: 50%;
+/*  top: 50%;*/
   bottom: auto;
   right: auto;
   width: 27px;
@@ -424,6 +423,8 @@ margin: 0 0 0 0;
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before {
   
   top: 0;
+   height: 3px;
+   width: 22px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
@@ -432,6 +433,8 @@ margin: 0 0 0 0;
 }
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
   top: 0;
+   height: 3px;
+   width: 22px;
   -webkit-transform: rotate(225deg);
   -moz-transform: rotate(225deg);
   -ms-transform: rotate(225deg);
@@ -442,7 +445,7 @@ margin: 0 0 0 0;
 .white_logo img{
   visibility: visible;
   float: left;
-  margin: -2% 2%;
+  margin: -38px 20px 0 20px;
   width: 80px;
 
 }
@@ -458,7 +461,7 @@ margin: 0 0 0 0;
     padding-left: 1em;
     background-color: transparent;
     height: 30px;
-    line-height: 30px;
+    /*line-height: 30px;*/
     right: 2.2em;
     top: 50%;
     bottom: auto;
@@ -488,10 +491,10 @@ margin: 0 0 0 0;
   margin-left: 0px;
   height: 100%;
   width: 100%;
-  background: -webkit-linear-gradient(left,#002a67, #0079dd); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(left,#002a67, #0079dd); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(left,#002a67, #0079dd); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right,#002a67, #0079dd); /* Standard syntax */
+  background: -webkit-linear-gradient(left,#00003b, #0079dd); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left,#00003b, #0079dd); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left,#00003b, #0079dd); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right,#00003b, #0079dd); /* Standard syntax */
   z-index: 2;
   text-align: center;
   padding: 50px 0;
@@ -516,11 +519,11 @@ margin: 0 0 0 0;
 .cd-primary-nav ul {
   width: 100%;
   left: 0;
-  margin: 5% 0% 0% 1%;
+  margin: 2vw 0 0 0;
 }
 .cd-primary-nav li {
   list-style-type: none;
-  font-size: 3.5vw;
+  font-size: 48px;
   text-transform: uppercase;
   text-align: center;
   color: #fff;
@@ -532,6 +535,8 @@ margin: 0 0 0 0;
   -moz-osx-font-smoothing: grayscale;
   margin: 8px -17px;
   width: 100vw;
+  vertical-align: middle;
+  
   
 }
 .cd-primary-nav a {
@@ -553,6 +558,23 @@ margin: 0 0 0 0;
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
+}
+@media only screen and (max-width: 768px){
+  .cd-primary-nav ul {
+  margin: 10% 0 0 0;
+  vertical-align: middle;
+}
+.cd-primary-nav li {
+ font-size: 38px;
+  
+}
+.cd-primary-nav ul a:hover {
+ font-size: 38px;
+
+  
+  
+}
+
 }
 
 /****************************************End of Nav bar****************************************/
@@ -609,10 +631,10 @@ span.text-content {
  
 ul.img-list li:hover span.text-content {
   opacity: 0.85;
-  background: -webkit-linear-gradient( left, #002a67, #0079dd) !important; /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(left, #002a67, #0079dd) !important; /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(left, #002a67, #0079dd) !important; /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #002a67, #0079dd) !important; /* Standard syntax */
+  background: -webkit-linear-gradient( left, #00003b, #0079dd) !important; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #00003b, #0079dd) !important; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #00003b, #0079dd) !important; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #00003b, #0079dd) !important; /* Standard syntax */
   
 }
 
@@ -642,12 +664,12 @@ transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
 }
 
 .subhead_name{
-  margin: 0% 7% 0% 5%;
+  margin: 0% 7% 0% 5.2%;
 }
 .show_more{
-  background-image: url(../images/more-projects.png);
+  background-color: #0079dd;
   width: 100%;
-  height: 43px;
+  height: 50px;
   margin:0;
   padding: 0;
 }
@@ -657,21 +679,24 @@ transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
   color:#fff;
   font-size: 18px;
   text-transform: uppercase;
-  line-height: 2.5em;
+  line-height: 2.8em;
   margin-top: 0;
 }
-.clients{
-  padding-top: 30px;
+.show_more:hover{
+  background-color: #002a67;
 }
-.clients h1{
+.clients{
+  padding-top: 60px;
+}
+/*.clients h1{
   font-size: 30px;
   font-weight: bold;
-  margin-top: 36px;
+  margin-top: 40px;
   font-family: "museo_sans900";
   color:#007BE1;
   text-align: center;
   text-transform: uppercase;
-}
+}*/
 .clients h4{
   color:#5C5C5C;
   font-family: "museo900";
@@ -692,7 +717,7 @@ transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
 .footer{
   background-image: url(../images/footer_bck.png);
   height: 40%;
-  width: 100%;
+  width: 102%;
 
 }
 
@@ -701,7 +726,7 @@ transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
 position: relative;
 left: 0;
 right: 0;
-margin-left: 49%;
+margin-left: 45%;
 margin-top: 2%;
 
 
@@ -753,6 +778,7 @@ margin-top: -3%;
 }
 .footer{
   height: 220px;
+  width: 102%;
 }
 .footer_list{
   float: right;
@@ -1073,6 +1099,7 @@ background-color: #F3560D;
   text-transform: uppercase;
   color: #0079dd; 
   line-height: 0;
+  margin-top: 0px;
  
 
 }
@@ -1082,6 +1109,7 @@ background-color: #F3560D;
   text-align: center;
   color: #9E9E9E;
   line-height: 1vw;
+  margin-bottom: 1.5%;
 }
 
 .capabilities ul li{
@@ -1167,7 +1195,7 @@ margin: 0% 0% 0% 0% !important;
   text-align: center;
   text-transform: uppercase;
   color: #0079dd; 
-  line-height: 1;
+  line-height: 0;
  
 
 }
@@ -1277,7 +1305,7 @@ margin: 0% 0% 0% -7% !important;
 /********************End of media query for (min-width: 668px)and (max-width: 968px)**********************/
 
 .capabilities-wrap{
-  margin: 1.5% auto 0 auto;
+ /* margin: 1.5% auto 0 auto;*/
 margin-left: 2.3%;
 overflow: hidden;
 }
