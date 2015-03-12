@@ -1,5 +1,21 @@
 jQuery(document).ready(function($){
 	//if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
+  
+     var $items = $(".img-list li");
+	$items.hide();
+	$items.slice(0, Math.floor($items.length/2)).show();
+
+	
+$( "#show_more" ).click(function() {
+  
+     var $items = $(".img-list li");
+	$items.show();
+	$('#show_more').toggleClass('hidden');
+});
+
+
+
+
 	var MQL = 1170;
 
 	//primary navigation slide-in effect
@@ -16,15 +32,15 @@ jQuery(document).ready(function($){
 		    	//if scrolling up...
 		    	if (currentTop > 0 && $('.cd-header').hasClass('is-fixed')) {
 		    		$('.cd-header').addClass('is-visible');
-
-		    		$('.white_logo').toggleClass('show');
-		    		$('logo').toggleClass('hidden');
-
-
-		    		
-
+		    		$('.menu').removeClass('cd-menu-icon');
+		    		$('.menu').addClass('cd-menu-icon1');
+		    		$('#logo').attr("src","images/logo_white.png");
+		   
 		    	} else {
 		    		$('.cd-header').removeClass('is-visible is-fixed');
+		    		$('.menu').removeClass('cd-menu-icon1');
+		    		$('.menu').addClass('cd-menu-icon');
+		    		$('#logo').attr("src","images/logo.png");
 
 		    	}
 
@@ -79,3 +95,5 @@ jQuery(document).ready(function($){
  		 });
               }
       google.maps.event.addDomListener(window, 'load', initialize);
+
+   

@@ -93,6 +93,7 @@ body{
 -moz-osx-font-smoothing: grayscale;
 text-rendering: optimizeLegibility;
 overflow: scroll;
+overflow-x:hidden; 
 }
 
 
@@ -105,9 +106,6 @@ overflow: scroll;
 margin: 12px 20px 0 5px;
 /* height: 9%; */
 width: 80px;
-
-  
-  
 }
 
 .menu {
@@ -336,6 +334,75 @@ margin: 6px 0 0 0;
     /* add a background color to the header when the navigation is open */
     background-color:  #002a67 solid;
   }
+ 
+  .cd-primary-nav-trigger .cd-menu-icon1 {
+  /* this span is the central line of the menu icon */
+  
+  position: absolute;
+  z-index: 1000;
+  left: 60%;
+/*  top: 50%;*/
+  bottom: auto;
+  opacity: 1;
+  right: auto;
+  width: 27px;
+  height: 3px;
+  background-color: #fff;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+
+  /* these are the upper and lower lines in the menu icon */
+}
+.cd-primary-nav-trigger .cd-menu-icon1 {
+  /* this span is the central line of the menu icon */
+  display: inline-block;
+  position: absolute;
+  /*left: 70%;*/
+  top: 11px;
+  bottom: auto;
+  right: auto;
+  opacity: 1;
+  -webkit-transform: translateX(50%) translateY(-50%);
+  -moz-transform: translateX(50%) translateY(-50%);
+  -ms-transform: translateX(50%) translateY(-50%);
+  -o-transform: translateX(50%) translateY(-50%);
+  transform: translateX(50%) translateY(-50%) ;
+  width: 32px;
+  height: 3px;
+  background-color: #fff;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s; 
+  
+}
+/* these are the upper and lower lines in the menu icon */
+ 
+.cd-primary-nav-trigger .cd-menu-icon1::before, .cd-primary-nav-trigger .cd-menu-icon1:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  right: 0;
+  z-index: -1;
+  display: block;
+  opacity: 1;
+  -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+  -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+  transition: transform .3s, top .3s, background-color 0s;
+}
+
+.cd-primary-nav-trigger .cd-menu-icon1::before {
+  top: -7px;
+}
+.cd-primary-nav-trigger .cd-menu-icon1::after {
+  top: 7px;
+}
+.cd-primary-nav-trigger .cd-menu-icon1.is-clicked {
+  background-color: transparent;
+
+}
 }
 
 
@@ -457,7 +524,8 @@ margin: 6px 0 0 0;
   float: left;
   margin: -38px 20px 0 20px;
   width: 80px;
-  z-index: 890;
+  opacity: 1;
+  
 
 }
 
@@ -599,6 +667,11 @@ margin: 6px 0 0 0;
 
 /****************************************End of Nav bar****************************************/
 /*************************WORK/Portfolio********************************/
+.wrap{
+  z-index: 999999;
+margin-bottom: 35vh;
+background-color: #fff;
+}
 .pic_holder{
   margin-bottom: 0%;
   width: 100%;
@@ -708,6 +781,9 @@ transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
 }
 .clients{
   padding-top: 75px;
+  background-color: #fff;
+  z-index:10;
+  float: none;
 }
 /*.clients h1{
   font-size: 30px;
@@ -751,8 +827,15 @@ padding-bottom: 2px;
 
 .footer{
   background-image: url(../images/footer_bck.png);
-  height: 40%;
-  width: 102%;
+  height: 23em;
+position: fixed;
+width: 100%;
+bottom: 0;
+z-index: -1;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+
+
 
 }
 
@@ -1052,6 +1135,8 @@ margin-right: -7px;
         background-size: cover;
   padding: 0 0 0 0;
   margin-top: 0%!important;
+  
+margin-bottom: 35vh;
 }
 
 .contact_form{
