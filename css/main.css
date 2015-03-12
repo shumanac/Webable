@@ -105,6 +105,7 @@ overflow: scroll;
 margin: 12px 20px 0 5px;
 /* height: 9%; */
 width: 80px;
+
   
   
 }
@@ -174,6 +175,7 @@ margin: 6px 0 0 0;
     -o-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
+
   .cd-header.menu-is-open {
     /* add a background color to the header when the navigation is open */
     background-color:  #002a67 solid;
@@ -311,8 +313,11 @@ margin: 6px 0 0 0;
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
     top: -60px!important;
-    background-color: #fff;
-    opacity: 0.95;
+      background: -webkit-linear-gradient( left, #00003b, #0079dd) !important; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #00003b, #0079dd) !important; /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #00003b, #0079dd) !important; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #00003b, #0079dd) !important; /* Standard syntax */
+    opacity: 0.75;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
@@ -325,6 +330,8 @@ margin: 6px 0 0 0;
     -o-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
+
+
   .cd-header.menu-is-open {
     /* add a background color to the header when the navigation is open */
     background-color:  #002a67 solid;
@@ -417,9 +424,12 @@ margin: 6px 0 0 0;
 
 }
 
+
+
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before, .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
   background-color: #fff;
 }
+
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before {
   
   top: 0;
@@ -447,13 +457,16 @@ margin: 6px 0 0 0;
   float: left;
   margin: -38px 20px 0 20px;
   width: 80px;
+  z-index: 890;
 
 }
 
 .hidden {
   display: none;
 }
-
+.show{
+  display: block;
+}
 
 @media only screen and (min-width: 768px) {
   .cd-primary-nav-trigger {
@@ -576,6 +589,13 @@ margin: 6px 0 0 0;
 }
 
 }
+.cd-header .is-visible .white_logo{
+    display: block;
+  }
+  .cd-header .is-visible .logo{
+    display: none;
+    
+  }
 
 /****************************************End of Nav bar****************************************/
 /*************************WORK/Portfolio********************************/
@@ -614,6 +634,7 @@ span.text-content span {
 }
 span.text-content {
   background: rgba(0,0,0,0.5);
+  text-align: center;
   color: white;
   cursor: pointer;
   left: 0;
@@ -645,7 +666,7 @@ ul.img-list li:hover span.text-content {
   font-size: 40px;
   line-height: 1;
   word-wrap:break-word;
-  margin: 54% 7% 0% 5%;
+  margin: 50% 5% 0% 5%;
   text-transform: uppercase;
   -webkit-transform: translateZ(-30px);
 -moz-transform: translateZ(-30px);
@@ -667,7 +688,7 @@ transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
   margin: 0% 7% 0% 5.2%;
 }
 .show_more{
-  background-color: #0079dd;
+  background-color: #002a67;
   width: 100%;
   height: 50px;
   margin:0;
@@ -683,10 +704,10 @@ transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
   margin-top: 0;
 }
 .show_more:hover{
-  background-color: #002a67;
+  background-color: #0079dd;
 }
 .clients{
-  padding-top: 60px;
+  padding-top: 75px;
 }
 /*.clients h1{
   font-size: 30px;
@@ -708,8 +729,22 @@ transition: opacity 0.2s 0.2s, transform 0.2s 0.2s;
 }
 .client_logo{
   text-align: center;
-  margin: 33px 102px 13px 102px;
+  margin: 0px 54px 0px 54px;
 }
+.client_logo li {
+
+border-top: 2px solid #ececec;
+padding-bottom: 2px;
+
+}
+.client_logo ul li img{
+  width: 128px;
+}
+.client_logo ul {
+  padding-bottom: 15px;
+}
+
+
 /*****************************End of Work/ Portfolio*************************/
 /*******************************FOOTER***************************************/
 
@@ -1099,7 +1134,7 @@ background-color: #F3560D;
   text-transform: uppercase;
   color: #0079dd; 
   line-height: 0;
-  margin-top: 0px;
+  margin-top: 0%;
  
 
 }

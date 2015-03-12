@@ -16,15 +16,25 @@ jQuery(document).ready(function($){
 		    	//if scrolling up...
 		    	if (currentTop > 0 && $('.cd-header').hasClass('is-fixed')) {
 		    		$('.cd-header').addClass('is-visible');
+
+		    		$('.white_logo').toggleClass('show');
+		    		$('logo').toggleClass('hidden');
+
+
+		    		
+
 		    	} else {
 		    		$('.cd-header').removeClass('is-visible is-fixed');
+
 		    	}
+
 
 		    } else {
 		    	//if scrolling down...
 		    	$('.cd-header').removeClass('is-visible');
 		    	if( currentTop > headerHeight && !$('.cd-header').hasClass('is-fixed')) $('.cd-header').addClass('is-fixed');
 		    }
+		     
 		    this.previousTop = currentTop;
 		});
 	}
