@@ -93,6 +93,17 @@ $( "#show_more" ).click(function() {
       		map: map,
       		icon: image
  		 });
+
+  			map.set('styles', [
+  {
+    featureType: 'road',
+    elementType: 'geometry',
+    stylers: [
+      { color: '#0079dd' },
+      { weight: 1.6 }
+    ]
+  },
+]);
               }
       google.maps.event.addDomListener(window, 'load', initialize);
 
