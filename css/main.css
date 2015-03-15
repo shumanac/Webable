@@ -1517,9 +1517,14 @@ left: -18%;
 text-align: center;
 position: relative;
 top: 5%!important;
-left: -2%;
+left: -2%!important;
 }
-
+.cap-list p{
+  display: block;
+  right: auto;
+  left: auto;
+  width: 20.5em;
+}
 }
 
 
