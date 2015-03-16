@@ -114,6 +114,17 @@ width: 80px;
 .menu {
    margin-top: 0.5em;
 width: 68px;
+cursor: pointer;
+-webkit-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-moz-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-ms-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-o-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
  /* height: 22%;*/
 }
 .menu-name h2{
@@ -314,8 +325,7 @@ margin: 6px 0 0 0;
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
     top: -60px!important;
-    background-color:  #0079dd !important; 
-    opacity: 0.85;
+    background-color: rgba(0, 121, 221,.75); 
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
@@ -338,14 +348,14 @@ margin: 6px 0 0 0;
   .cd-primary-nav-trigger .cd-menu-icon1 {
   /* this span is the central line of the menu icon */
   
-  position: absolute;
+  position: relative;
   z-index: 1000;
-  left: 60%;
+/*  left: 60%;*/
 /*  top: 50%;*/
   bottom: auto;
   opacity: 1;
   right: auto;
-  width: 27px;
+  width: 97px;
   height: 3px;
   background-color: #fff;
   -webkit-transition: background-color 0.3s;
@@ -357,11 +367,11 @@ margin: 6px 0 0 0;
 .cd-primary-nav-trigger .cd-menu-icon1 {
   /* this span is the central line of the menu icon */
   display: inline-block;
-  position: absolute;
-  /*left: 70%;*/
-  top: 11px;
+  position: relative;
+  left: auto!important;
+  top: 3px;
   bottom: auto;
-  right: auto;
+  right:91%;
   opacity: 1;
   -webkit-transform: translateX(50%) translateY(-50%);
   -moz-transform: translateX(50%) translateY(-50%);
@@ -393,6 +403,7 @@ margin: 6px 0 0 0;
   transition: transform .3s, top .3s, background-color 0s;
 }
 
+
 .cd-primary-nav-trigger .cd-menu-icon1::before {
   top: -7px;
 }
@@ -403,6 +414,7 @@ margin: 6px 0 0 0;
   background-color: transparent;
 
 }
+
 
 }
 
@@ -449,6 +461,9 @@ margin: 6px 0 0 0;
 -ms-transform: translate3d(0, 0, 0);
 -o-transform: translate3d(0, 0, 0);
 transform: translate3d(0, 0, 0);
+
+
+
   /* these are the upper and lower lines in the menu icon */
 }
 .cd-primary-nav-trigger .cd-menu-icon {
@@ -476,11 +491,48 @@ transform: translate3d(0, 0, 0);
 -ms-transform: translate3d(0, 0, 0);
 -o-transform: translate3d(0, 0, 0);
 transform: translate3d(0, 0, 0);
+-webkit-transition-delay: 140ms;
+-moz-transition-delay: 140ms;
+-ms-transition-delay: 140ms;
+-o-transition-delay: 140ms;
+transition-delay: 140ms;
+
+
   
 }
 /* these are the upper and lower lines in the menu icon */
  
-.cd-primary-nav-trigger .cd-menu-icon::before, .cd-primary-nav-trigger .cd-menu-icon:after {
+.cd-primary-nav-trigger .cd-menu-icon::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #0079dd;
+  right: 0;
+  z-index: -1;
+  display: block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+  -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+  transition: transform .3s, top .3s, background-color 0s;
+  -webkit-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-moz-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-ms-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-o-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+-webkit-transition-delay: 210ms;
+-moz-transition-delay: 210ms;
+-ms-transition-delay: 210ms;
+-o-transition-delay: 210ms;
+transition-delay: 210ms;
+
+}
+.cd-primary-nav-trigger .cd-menu-icon:after {
   content: '';
   width: 100%;
   height: 100%;
@@ -502,9 +554,12 @@ transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
 -ms-transform: translate3d(0, 0, 0);
 -o-transform: translate3d(0, 0, 0);
 transform: translate3d(0, 0, 0);
+-webkit-transition-delay: 70ms;
+-moz-transition-delay: 70ms;
+-ms-transition-delay: 70ms;
+-o-transition-delay: 70ms;
+transition-delay: 70ms;
 }
-
-
 
 
 .cd-primary-nav-trigger .cd-menu-icon::before {
@@ -526,7 +581,7 @@ transform: translate3d(0, 0, 0);
 
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before {
   
-  top: 0;
+   top: 0;
    height: 3px;
    width: 22px;
   -webkit-transform: rotate(135deg);
@@ -666,6 +721,58 @@ transform: translate3d(0, 0, 0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
+}
+
+ 
+.line4 {
+    /* this span is the central line of the menu icon */
+  display: inline-block;
+  position: absolute;
+  left: 1%;
+  top: 14px;
+  opacity: 1;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(50%) translateY(-50%);
+  -moz-transform: translateX(50%) translateY(-50%);
+  -ms-transform: translateX(50%) translateY(-50%);
+  -o-transform: translateX(50%) translateY(-50%);
+  transform: translateX(50%) translateY(-50%) ;
+  width: 32px;
+  height: 3px;
+  background-color: #0079dd;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s; 
+  transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+-webkit-transition-delay: 0ms;
+-moz-transition-delay: 0ms;
+-ms-transition-delay: 0ms;
+-o-transition-delay: 0ms;
+transition-delay: 0ms;
+}
+
+.menu:hover .line4  {
+  opacity: 0;
+  -webkit-transform-origin: top right;
+-moz-transform-origin: top right;
+-o-transform-origin: top right;
+transform-origin: top right;
+
+}
+
+.menu:hover .cd-menu-icon::before{
+   opacity: 1;
+   -webkit-transform-origin: top right;
+-moz-transform-origin: top right;
+-o-transform-origin: top right;
+transform-origin: top right;
+
 }
 @media only screen and (max-width: 768px){
   .cd-primary-nav ul {

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.nav {
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+-ms-backface-visibility: hidden;
+backface-visibility: hidden;
+background: #0083dd;
+cursor: pointer;
+border: none;
+width: 93px;
+height: 65px;
+position: relative;
+z-index: 1;
+}
+.nav .icon-container {
+width: 93px;
+height: 18px;
+position: absolute;
+top: 24px;
+left: 0;
+cursor: pointer;
+-webkit-backface-visibility: hidden;
+-moz-backface-visibility: hidden;
+-o-backface-visibility: hidden;
+-ms-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+.nav .line {
+position: absolute;
+left: 65px;
+right: 28px;
+height: 3px;
+background-color: #FFF;
+-webkit-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-moz-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-ms-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-o-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+.active .nav .line {
+left: 28px;
+}
+.nav .line01 {
+top: 0;
+opacity: 1;
+-webkit-transition-delay: 210ms;
+-moz-transition-delay: 210ms;
+-ms-transition-delay: 210ms;
+-o-transition-delay: 210ms;
+transition-delay: 210ms;
+}
+
+.nav .line02 {
+top: 7px;
+-webkit-transition-delay: 140ms;
+-moz-transition-delay: 140ms;
+-ms-transition-delay: 140ms;
+-o-transition-delay: 140ms;
+transition-delay: 140ms;
+}
+.nav .line03 {
+top: 14px;
+-webkit-transition-delay: 70ms;
+-moz-transition-delay: 70ms;
+-ms-transition-delay: 70ms;
+-o-transition-delay: 70ms;
+transition-delay: 70ms;
+}
+.nav .line04 {
+top: 21px;
+opacity: 0;
+-webkit-transition-delay: 0ms;
+-moz-transition-delay: 0ms;
+-ms-transition-delay: 0ms;
+-o-transition-delay: 0ms;
+transition-delay: 0ms;
+}
+	</style>
+
+
+</head>
+
+<body>
+	<div class="buttons-header active">
+    <button class="nav">
+        <span class="icon-container">
+            <span class="line line01"></span>
+            <span class="line line02"></span>
+            <span class="line line03"></span>
+            <span class="line line04"></span>
+        </span>
+    </button>
+
+</div>
+	 
+
+
+</body>
+
+</html>

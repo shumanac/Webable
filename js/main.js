@@ -55,6 +55,9 @@ $( "#show_more" ).click(function() {
 		});
 	}
 
+
+
+
 	//open/close primary navigation
 	$('.cd-primary-nav-trigger').on('click', function(){
 		$('.cd-menu-icon').toggleClass('is-clicked'); 
