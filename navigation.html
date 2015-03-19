@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+   <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-2.1.1.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>   
 	<style>
+
+.cd-primary-nav-trigger {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  z-index: 3;
+}
 	.nav {
 -webkit-backface-visibility: hidden;
 -moz-backface-visibility: hidden;
 -o-backface-visibility: hidden;
 -ms-backface-visibility: hidden;
 backface-visibility: hidden;
-background: #0083dd;
 cursor: pointer;
 border: none;
 width: 93px;
 height: 65px;
 position: relative;
-z-index: 1;
+right: 0;
 }
 .nav .icon-container {
 width: 93px;
 height: 18px;
 position: absolute;
 top: 24px;
-left: 0;
+right: 0;
 cursor: pointer;
 -webkit-backface-visibility: hidden;
 -moz-backface-visibility: hidden;
@@ -34,7 +46,7 @@ position: absolute;
 left: 65px;
 right: 28px;
 height: 3px;
-background-color: #FFF;
+background-color: #0079dd;
 -webkit-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
 -moz-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
 -ms-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -49,7 +61,7 @@ transform: translate3d(0, 0, 0);
 .active .nav .line {
 left: 28px;
 }
-.nav .line01 {
+.cd-primary-nav-trigger.nav .line01  {
 top: 0;
 opacity: 1;
 -webkit-transition-delay: 210ms;
@@ -57,9 +69,29 @@ opacity: 1;
 -ms-transition-delay: 210ms;
 -o-transition-delay: 210ms;
 transition-delay: 210ms;
+  position: absolute;
+  z-index: 1000;
+  left: 70%;
+/*  top: 50%;*/
+  bottom: auto;
+  right: auto;
+  width: 27px;
+  height: 3px;
+  background-color: #0079dd;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  transition-delay: 210ms;
+  transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+-webkit-transform: translate3d(0, 0, 0);
+-moz-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
 }
 
-.nav .line02 {
+.cd-primary-nav-trigger .nav .line02 {
 top: 7px;
 -webkit-transition-delay: 140ms;
 -moz-transition-delay: 140ms;
@@ -67,7 +99,7 @@ top: 7px;
 -o-transition-delay: 140ms;
 transition-delay: 140ms;
 }
-.nav .line03 {
+.cd-primary-nav-trigger .nav .line03 {
 top: 14px;
 -webkit-transition-delay: 70ms;
 -moz-transition-delay: 70ms;
@@ -75,7 +107,7 @@ top: 14px;
 -o-transition-delay: 70ms;
 transition-delay: 70ms;
 }
-.nav .line04 {
+.cd-primary-nav-trigger .nav .line04 {
 top: 21px;
 opacity: 0;
 -webkit-transition-delay: 0ms;
@@ -84,26 +116,450 @@ opacity: 0;
 -o-transition-delay: 0ms;
 transition-delay: 0ms;
 }
+.cd-primary-nav-trigger .nav:hover .line {
+-webkit-transform:translate3d(0,-7px,0);
+-moz-transform:translate3d(0,-7px,0);
+-ms-transform:translate3d(0,-7px,0);
+-o-transform:translate3d(0,-7px,0);
+transform:translate3d(0,-7px,0);
+}
+
+.cd-primary-nav-trigger .nav:hover .line01 {
+opacity:0;
+-webkit-transition-delay:0;
+-moz-transition-delay:0;
+-ms-transition-delay:0;
+-o-transition-delay:0;
+transition-delay:0;
+}
+
+.cd-primary-nav-trigger .nav:hover .line02 {
+-webkit-transition-delay:70ms;
+-moz-transition-delay:70ms;
+-ms-transition-delay:70ms;
+-o-transition-delay:70ms;
+transition-delay:70ms;
+}
+
+.cd-primary-nav-trigger.nav:hover .line03 {
+-webkit-transition-delay:140ms;
+-moz-transition-delay:140ms;
+-ms-transition-delay:140ms;
+-o-transition-delay:140ms;
+transition-delay:140ms;
+}
+
+.cd-primary-nav-trigger .nav:hover .line04 {
+opacity:1;
+-webkit-transition-delay:210ms;
+-moz-transition-delay:210ms;
+-ms-transition-delay:210ms;
+-o-transition-delay:210ms;
+transition-delay:210ms;
+}
+
+
+  .cd-header {
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+    .cd-header.is-fixed {
+    /* when the user scrolls down, we hide the header right above the viewport */
+    position: fixed;
+    top: -60px!important;
+    background-color: #fff;
+    opacity: 0.95;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+  }
+ .cd-header.is-visible {
+    /* if the user changes the scrolling direction, we show the header */
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  .cd-header.menu-is-open {
+    /* add a background color to the header when the navigation is open */
+    background-color:  #002a67 solid;
+  }
+
+  .navigation-wrapper {
+  background: -webkit-linear-gradient(#002a67, #0079dd); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#002a67, #0079dd); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#002a67, #0079dd); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#002a67, #0079dd); /* Standard syntax */
+  padding: 40px 0 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  display: none;
+}
+
+.navigation {
+  padding: 20px 5% 0 5%;
+  display: none;
+}
+.show-menu {
+  display: block;
+}
+
+
+.navigation li {
+  list-style: none;
+  margin: 50px 0;
+
+} 
+.navigation li.small-padding {
+  margin: 0;
+  }
+
+.navigation li a {
+  display: block;
+  padding: 10px 0 10px 1%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 150%;
+  letter-spacing: .1em;
+  border-left: 3px solid #fff;
+   -webkit-transition: .4s linear; 
+    -moz-transition: .4s linear; 
+    transition: .4s linear;
+  opacity: 0.95;
+  -moz-transition: all ease .3s;
+  -webkit-transition: all ease .3s;
+  -ms-transition: all ease .3s;
+  -o-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+.navigation li a:hover {
+  color: #fff;
+  padding-left: 5%;
+  border-left: 3px solid #eee;
+}
+
+.cd-header {
+  
+  top: 0%!important;
+  left: 0;
+  width:100vw;
+  z-index: 3;
+  box-shadow: 0 -11px 2px rgba(0, 0, 0, 0.3);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cd-primary-nav-trigger .icon-container.is-clicked {
+  background-color: transparent;
+
+}
+
+.icon-container.is-clicked .line03 , .icon-container.is-clicked .line01  {
+  background-color: #fff;
+  z-index: 3;
+
+}
+
+/* .cd-primary-nav-trigger .icon-container.is-clicked {
+  background-color: transparent;
+
+} */
+
+  .cd-primary-nav-trigger {
+    width: 100px;
+    padding-left: 1em;
+    background-color: transparent;
+    height: 30px;
+    /*line-height: 30px;*/
+    right: 2.2em;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .cd-primary-nav-trigger .icon-container {
+    left: auto;
+    right: -1em;
+    -webkit-transform: translateX(0) translateY(-50%);
+    -moz-transform: translateX(0) translateY(-50%);
+    -ms-transform: translateX(0) translateY(-50%);
+    -o-transform: translateX(0) translateY(-50%);
+    transform: translateX(0) translateY(-50%);
+  }
+
+  .cd-primary-nav {
+  /* by default it's hidden - on top of the viewport */
+  position: fixed;
+  top: 0;
+  margin-left: 0px;
+  height: 100%;
+  width: 100%;
+  background: -webkit-linear-gradient(left,#00003b, #0079dd); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left,#00003b, #0079dd); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left,#00003b, #0079dd); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right,#00003b, #0079dd); /* Standard syntax */
+  z-index: 0;
+  text-align: center;
+  padding: 50px 0;
+  opacity: .95;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.cd-primary-nav.is-visible{
+  -webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+-ms-transition: all 0.3s;
+-o-transition: all 0.3s;
+transition: all 0.3s;
+}
+.icon-container.is-clicked .line:nth-child(3) {
+     top: 0;
+   height: 3px;
+   width: 22px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.icon-container.is-clicked .line:nth-child(1){
+  top: 0;
+   height: 3px;
+   width: 22px;
+   opacity: 1;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.cd-primary-nav ul {
+  width: 100%;
+  left: 0;
+  margin: 2vw 0 0 0;
+}
+.cd-primary-nav li {
+  list-style-type: none;
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-family: "museo_sans900";
+  font-weight: 500;
+  display: table;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 8px -17px;
+  width: 100vw;
+  vertical-align: middle;
+  
+  
+}
+.cd-primary-nav a {
+  color: #fff;
+ 
+ 
+}
+ .cd-primary-nav ul a:hover {
+  background-color: #fff;
+  width: 100vw;
+  color: #0079dd;
+  display: block;
+}
+
+
+.cd-primary-nav.is-visible {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
 	</style>
 
 
 </head>
 
 <body>
-	<div class="buttons-header active">
-    <button class="nav">
-        <span class="icon-container">
+
+<header class="cd-header">
+     <div  class="logo left"><img id="logo" src="images/logo.png"><img src="images/logo_white.png" style="display:none;opacity:1;"></div>
+ 
+ 
+ <!-- cd-primary-nav-trigger -->
+
+    </header>
+<nav class="cd-primary-nav small-1 column">
+    
+        <div class="white_logo "><img src="images/logo_white.png"></div>
+    
+    <ul>
+          <li><a href="#">Work</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Capabilities</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Bable Blog</a></li>
+        <li><a href="#">Contact</a></li>
+
+    </ul>
+  </nav>
+
+      <a class="cd-primary-nav-trigger" href="#0">
+        
+        <div class="buttons-header active cd-header">
+        <div class="nav menu right">
+        <span class=" icon-container">
             <span class="line line01"></span>
             <span class="line line02"></span>
             <span class="line line03"></span>
             <span class="line line04"></span>
-        </span>
-    </button>
-
+ 
+    </span>
 </div>
-	 
+</div>
+    </a>
 
 
+ 
+<main>
+    lkjsdlfjaslfjlaksjfaslkfjaskljfklasjf
+  klslkfjlasfjlas
+  lkjljklljl
+  lkjljklljl
+  
+    lkjsdlfjaslfjlaksjfaslkfjaskljfklasjf
+  klslkfjlasfjlas
+  lkjljklljl
+  lkjljklljl
+    lkjsdlfjaslfjlaksjfaslkfjaskljfklasjf
+  klslkfjlasfjlas
+  lkjljklljl
+  lkjljklljl
+    lkjsdlfjaslfjlaksjfaslkfjaskljfklasjf
+  klslkfjlasfjlas
+  lkjljklljl
+  lkjljklljl
+    lkjsdlfjaslfjlaksjfaslkfjaskljfklasjf
+  klslkfjlasfjlas
+  lkjljklljl
+  lkjljklljl
+  
+    <!-- content -->
+</main>
+
+
+
+
+
+<script>
+jQuery(document).ready(function($){
+    var MQL = 1170;
+
+    //primary navigation slide-in effect
+    if($(window).width() > MQL) {
+        var headerHeight = $('.cd-header').height();
+        $(window).on('scroll',
+        {
+            previousTop: 0
+        }, 
+        function () {
+            var currentTop = $(window).scrollTop();
+            //check if user is scrolling up
+            if (currentTop < this.previousTop ) {
+                //if scrolling up...
+                if (currentTop > 0 && $('.cd-header').hasClass('is-fixed')) {
+                    $('.cd-header').addClass('is-visible');
+                    $('.menu').removeClass('icon-container');
+                    $('.menu').addClass('cd-menu-icon1');
+                    $('#logo').attr("src","images/logo_white.png");
+           
+                } else {
+                    $('.cd-header').removeClass('is-visible is-fixed');
+                    $('.menu').removeClass('cd-menu-icon1');
+                    $('.menu').addClass('cd-menu-icon');
+                    $('#logo').attr("src","images/logo.png");
+
+                }
+
+
+            } else {
+                //if scrolling down...
+                $('.cd-header').removeClass('is-visible');
+                if( currentTop > headerHeight && !$('.cd-header').hasClass('is-fixed')) $('.cd-header').addClass('is-fixed');
+            }
+             
+            this.previousTop = currentTop;
+        });
+    }
+
+
+
+
+    //open/close primary navigation
+    $('.cd-primary-nav-trigger').on('click', function(){
+        $('.icon-container').toggleClass('is-clicked'); 
+        $('.cd-header').toggleClass('menu-is-open');
+        $('.logo').toggleClass('hidden');
+            
+        
+        //in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
+        if( $('.cd-primary-nav').hasClass('is-visible') ) {
+            
+            $('.cd-primary-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+                $('body').removeClass('overflow-hidden');
+                
+            });
+        } else {
+            $('.cd-primary-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+                $('.is-fixed').toggleClass('hidden');
+                $('body').addClass('overflow-hidden');
+            }); 
+        }
+    });
+});
+
+
+
+
+</script>
+    
 </body>
 
 </html>

@@ -14,9 +14,74 @@ $( "#show_more" ).click(function() {
 });
 
 
+    var MQL = 1170;
+
+    //primary navigation slide-in effect
+    if($(window).width() > MQL) {
+        var headerHeight = $('.cd-header').height();
+        $(window).on('scroll',
+        {
+            previousTop: 0
+        }, 
+        function () {
+            var currentTop = $(window).scrollTop();
+            //check if user is scrolling up
+            if (currentTop < this.previousTop ) {
+                //if scrolling up...
+                if (currentTop > 0 && $('.cd-header').hasClass('is-fixed')) {
+                    $('.cd-header').addClass('is-visible');
+                    $('.menu').removeClass('icon-container');
+                    $('.menu').addClass('cd-menu-icon1');
+                    $('#logo').attr("src","images/logo_white.png");
+           
+                } else {
+                    $('.cd-header').removeClass('is-visible is-fixed');
+                    $('.menu').removeClass('cd-menu-icon1');
+                    $('.menu').addClass('cd-menu-icon');
+                    $('#logo').attr("src","images/logo.png");
+
+                }
 
 
-	var MQL = 1170;
+            } else {
+                //if scrolling down...
+                $('.cd-header').removeClass('is-visible');
+                if( currentTop > headerHeight && !$('.cd-header').hasClass('is-fixed')) $('.cd-header').addClass('is-fixed');
+            }
+             
+            this.previousTop = currentTop;
+        });
+    }
+
+
+
+
+    //open/close primary navigation
+    $('.cd-primary-nav-trigger').on('click', function(){
+        $('.icon-container').toggleClass('is-clicked'); 
+        $('.cd-header').toggleClass('menu-is-open');
+        $('.logo').toggleClass('hidden');
+            
+        
+        //in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
+        if( $('.cd-primary-nav').hasClass('is-visible') ) {
+            
+            $('.cd-primary-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+                $('body').removeClass('overflow-hidden');
+                
+            });
+        } else {
+            $('.cd-primary-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+                $('.is-fixed').toggleClass('hidden');
+                $('body').addClass('overflow-hidden');
+            }); 
+        }
+    });
+});
+
+
+
+/*	var MQL = 1170;
 
 	//primary navigation slide-in effect
 	if($(window).width() > MQL) {
@@ -57,19 +122,22 @@ $( "#show_more" ).click(function() {
 
 
 
-
 	//open/close primary navigation
 	$('.cd-primary-nav-trigger').on('click', function(){
 		$('.cd-menu-icon').toggleClass('is-clicked'); 
 		$('.cd-header').toggleClass('menu-is-open');
+		$('.cd-menu-icon').toggleClass('is-notclicked'); 
 		$('.logo').toggleClass('hidden');
+
 			
 		
 		//in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
 		if( $('.cd-primary-nav').hasClass('is-visible') ) {
-			
+		
 			$('.cd-primary-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
 				$('body').removeClass('overflow-hidden');
+
+
 				
 			});
 		} else {
@@ -80,6 +148,13 @@ $( "#show_more" ).click(function() {
 		}
 	});
 });
+
+$('.is-clicked').on('click', function(){
+
+$('.cd-menu-icon').addClass('is-notclicked'); 
+
+});*/
+
 
  function initialize() {
         var mapCanvas = document.getElementById('map-canvas');
