@@ -143,6 +143,7 @@ margin: 6px 0 0 0;
   top: 0;
   height: 100%;
   width: 50%;
+  cursor: pointer;
 }
 .nav {
 -webkit-backface-visibility: hidden;
@@ -152,6 +153,9 @@ margin: 6px 0 0 0;
 backface-visibility: hidden;
 cursor: pointer;
 border: none;
+width: 93px;
+height: 65px;
+position: relative;
 /*z-index:99;
 position: absolute;*/
 
@@ -939,23 +943,22 @@ transition-delay:210ms;
 }
 
  
-/*.cd-primary-nav-trigger .icon-container1 {
-
-  
+.cd-primary-nav-trigger .icon-container1 {
   position: relative;
   z-index: 1000;
   bottom: auto;
-  opacity: 1;
+  opacity: .5;
   right: auto;
+  left:93%;
   width: 97px;
   height: 3px;
-  background-color:  #0079dd;
+  cursor: pointer;
   -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
   transition: background-color 0.3s;
 
 }
-
+/*
 .cd-primary-nav-trigger .icon-container1 {
 
   display: inline-block;
@@ -1025,7 +1028,7 @@ transition-delay: 210ms;
   right: auto;
   width: 27px;
   height: 3px;
-  background-color: #0079dd;
+  background-color: #fff;
   cursor: pointer;
   -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
@@ -1041,6 +1044,7 @@ transform: translate3d(0, 0, 0);
 
 .cd-primary-nav-trigger .cd-header .icon-container1 .line02 {
 top: 7px;
+cursor: pointer;
 -webkit-transition-delay: 140ms;
 -moz-transition-delay: 140ms;
 -ms-transition-delay: 140ms;
@@ -1049,6 +1053,7 @@ transition-delay: 140ms;
 }
 .cd-primary-nav-trigger .cd-header .icon-container1.line03 {
 top: 14px;
+cursor: pointer;
 -webkit-transition-delay: 70ms;
 -moz-transition-delay: 70ms;
 -ms-transition-delay: 70ms;
@@ -1058,6 +1063,7 @@ transition-delay: 70ms;
 .cd-primary-nav-trigger .cd-header .icon-container1.line04 {
 top: 21px;
 opacity: 0;
+cursor: pointer;
 -webkit-transition-delay: 0ms;
 -moz-transition-delay: 0ms;
 -ms-transition-delay: 0ms;
