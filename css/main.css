@@ -27,43 +27,43 @@
 }
 @font-face{
   font-family: opensans-regular;
-  src:url("../Fonts/Open Sans/OpenSans-Regular.ttf69");
+  src:url("../Fonts/Open Sans/OpenSans-Regular.ttf69") format('truetype');
 }
 @font-face{
   font-family: opensans-Bold;
-  src:url("../Fonts/Open Sans/OpenSans-Bold.ttf");
+  src:url("../Fonts/Open Sans/OpenSans-Bold.ttf") format('truetype');
 }
 @font-face{
   font-family: opensans-BoldItalic;
-  src:url("../Fonts/Open Sans/OpenSans-BoldItalic.ttf");
+  src:url("../Fonts/Open Sans/OpenSans-BoldItalic.ttf") format('truetype');
 }
 @font-face{
   font-family: OpenSans-ExtraBold;
-  src:url("../Fonts/Open Sans/OOpenSans-ExtraBold.ttf");
+  src:url("../Fonts/Open Sans/OOpenSans-ExtraBold.ttf") format('truetype');
 }
 @font-face{
   font-family: OpenSans-ExtraBoldItalic;
-  src:url("../Fonts/Open Sans/OpenSans-ExtraBoldItalic.ttf");
+  src:url("../Fonts/Open Sans/OpenSans-ExtraBoldItalic.ttf") format('truetype');
 }
 @font-face{
   font-family: OpenSans-Italic;
-  src:url("../Fonts/Open Sans/OpenSans-Italic.ttf");
+  src:url("../Fonts/Open Sans/OpenSans-Italic.ttf") format('truetype');
 }
 @font-face{
   font-family: OpenSans-Light;
-  src:url("../Fonts/Open Sans/OpenSans-Light.ttf");
+  src:url("../Fonts/Open Sans/OpenSans-Light.ttf") format('truetype');
 }
 @font-face{
   font-family: OpenSans-LightItalic;
-  src:url("../Fonts/Open Sans/OpenSans-LightItalic.ttf");
+  src:url("../Fonts/Open Sans/OpenSans-LightItalic.ttf") format('truetype');
 }
 @font-face{
   font-family: OpenSans-Semibold;
-  src:url("../Fonts/Open Sans/OpenSans-Semibold.ttf");
+  src:url("../Fonts/Open Sans/OpenSans-Semibold.ttf") format('truetype');
 }
 @font-face{
   font-family: OpenSans-SemiboldItalic;
-  src:url("../Fonts/Open Sans/OpenSans-SemiboldItalic.ttf"); 
+  src:url("../Fonts/Open Sans/OpenSans-SemiboldItalic.ttf") format('truetype'); 
 
 }
 /******** Primary style***************/
@@ -86,6 +86,7 @@
     display: block;
   }
 
+
 /***************HTML5 display********************/
 
 
@@ -97,6 +98,7 @@ body{
 text-rendering: optimizeLegibility;
 overflow: scroll;
 overflow-x:hidden; 
+line-height: 1;
 }
 
 
@@ -107,13 +109,13 @@ overflow-x:hidden;
   height: 60px!important;
 }
 .logo{
-margin: 12px 20px 0 5px;
+margin: 19px 0 0 20px;
 /* height: 9%; */
 width: 80px;
 }
 
 .menu {
-margin-top: -5.5em;
+margin-top: -4.5em!important;
 width: 68px;
 cursor: pointer;
 -webkit-transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -156,6 +158,7 @@ border: none;
 width: 93px;
 height: 65px;
 position: relative;
+right: 2%;
 /*z-index:99;
 position: absolute;*/
 
@@ -332,6 +335,7 @@ background: -moz-linear-gradient(#002a67, #0079dd); /* For Firefox 3.6 to 15 */
 background: linear-gradient(#002a67, #0079dd); /* Standard syntax */
 padding: 40px 0 0 0;
 position: fixed;
+overflow: hidden;
 top: 0;
 left: 0;
 height: 100%;
@@ -442,7 +446,7 @@ display: none;
   background: -o-linear-gradient(left,#00003b, #0079dd); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(left,#00003b, #0079dd); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right,#00003b, #0079dd); /* Standard syntax */
-  z-index: 5;
+  z-index: 4;
   text-align: center;
   padding: 50px 0;
   opacity: .95;
@@ -472,11 +476,12 @@ display: none;
 transition: all 0.3s;
 }
 .icon-container.is-clicked .line:nth-child(3) {
-     top: 0;
+     top: 2px;
    height: 3px;
    width: 22px;
    opacity: 1;
-   z-index: 99;
+   z-index:15;
+   position: absolute;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
@@ -484,11 +489,12 @@ transition: all 0.3s;
   transform: rotate(135deg);
 }
 .icon-container.is-clicked .line:nth-child(1){
-  top: 0;
+  top: 2px;
    height: 3px;
    width: 22px;
    opacity: 1;
-   z-index: 99;
+   z-index: 15;
+   position: absolute;
   -webkit-transform: rotate(225deg);
   -moz-transform: rotate(225deg);
   -ms-transform: rotate(225deg);
@@ -633,13 +639,15 @@ transition: all 0.3s;
   .cd-header.menu-is-open {
     /* add a background color to the header when the navigation is open */
     background-color:  #002a67 solid;
+
   }
   .icon-container.is-clicked .line:nth-child(3) {
      top: 0;
    height: 3px;
    width: 22px;
    opacity: 1;
-   z-index: 99;
+   z-index: 15;
+   position: absolute;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
@@ -651,7 +659,8 @@ transition: all 0.3s;
    height: 3px;
    width: 22px;
    opacity: 1;
-   z-index: 99;
+   z-index: 5;
+   position: absolute;
   -webkit-transform: rotate(225deg);
   -moz-transform: rotate(225deg);
   -ms-transform: rotate(225deg);
@@ -813,8 +822,9 @@ transition-delay:210ms;
   background: -o-linear-gradient(#002a67, #0079dd); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#002a67, #0079dd); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#002a67, #0079dd); /* Standard syntax */
-  padding: 40px 0 0 0;
-  position: fixed;
+/*  padding: 40px 0 0 0;
+*/  position: fixed;
+  overflow: hidden;
   top: 0;
   left: 0;
   height: 100%;
@@ -918,11 +928,12 @@ transition-delay:210ms;
     background-color:  #002a67 solid;
   }
   .icon-container.is-clicked .line:nth-child(3) {
-     top: 0;
+     top: 2px;
    height: 3px;
    width: 22px;
    opacity: 1;
-   z-index: 99;
+   z-index: 15;
+   position: absolute;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
@@ -930,11 +941,12 @@ transition-delay:210ms;
   transform: rotate(135deg);
 }
 .icon-container.is-clicked .line:nth-child(1){
-  top: 0;
+  top: 2px;
    height: 3px;
    width: 22px;
    opacity: 1;
-   z-index: 99;
+   z-index: 15;
+   position: absolute;
   -webkit-transform: rotate(225deg);
   -moz-transform: rotate(225deg);
   -ms-transform: rotate(225deg);
@@ -1185,7 +1197,7 @@ transition-delay:210ms;
     height: 30px;
     /*line-height: 30px;*/
     right: 2.2em;
-    top: 50%;
+   /* top: 50%;*/
     bottom: auto;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -1209,7 +1221,7 @@ transition-delay:210ms;
   background: -o-linear-gradient(left,#00003b, #0079dd); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(left,#00003b, #0079dd); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right,#00003b, #0079dd); /* Standard syntax */
-  z-index: 5;
+  z-index:1;
   text-align: center;
   padding: 50px 0;
   opacity: .95;
@@ -1233,7 +1245,7 @@ transition-delay:210ms;
 .cd-primary-nav ul {
   width: 100%;
   left: 0;
-  margin: 2vw 0 0 0;
+  margin: 3.5vw 0 0 1vw;
 }
 .cd-primary-nav li {
   list-style-type: none;
@@ -1771,8 +1783,7 @@ margin-right: -7px;
         -o-background-size: cover;
         background-size: cover;
   padding: 0 0 0 0;
-  margin-top: 0%!important;
-  
+ top:-12%;
 margin-bottom: 35vh;
 }
 
@@ -1870,12 +1881,12 @@ background-color: #F3560D;
 
 .wrap h1{
   font-family: "museo_sans900";
-  font-size: 3em;
+  font-size: 36pt;
   text-align: center;
   text-transform: uppercase;
   color: #0079dd; 
   line-height: 0;
-  margin-top: 0%;
+  margin-top: 3%;
  
 
 }
@@ -1887,7 +1898,9 @@ background-color: #F3560D;
   line-height: 1vw;
   margin-bottom: 1.5%;
 }
- 
+ .capabilities ul{
+  clear: both;
+ }
 
 .capabilities ul li{
 
@@ -1896,6 +1909,8 @@ display: inline-block;
 background-color: #002B69;
 height: 100vh;
 width: 31.99vw;
+text-align: center;
+list-style-type: none;
 /*position: relative;*/
 
 }
@@ -1908,9 +1923,9 @@ display: block;
 }
 
 @media only screen and (max-width: 667px) {
-  .capabilities ul{
+  /*.capabilities ul{
     padding-top: 6%;
-  }
+  }*/
 .capabilities ul li{
  padding: 7% 0% 0% 2%;
 overflow: hidden;
@@ -1918,6 +1933,7 @@ display: inline-block;
 background-color: #002B69;
 height: 90vh;
 width: 99vw;
+
 /*margin-bottom: 2%;
 margin-left: 5%;*/
 
@@ -1940,7 +1956,6 @@ margin-left: 5%;*/
  
 }
 .cap-content {
-
 padding: 0 1% !important;
 position: absolute;
 right: auto;
