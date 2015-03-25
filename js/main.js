@@ -30,14 +30,13 @@ $( "#show_more" ).click(function() {
                 //if scrolling up...
                 if (currentTop > 0 && $('.cd-header').hasClass('is-fixed')) {
                     $('.cd-header').addClass('is-visible');
-                    $('.cd-header').removeClass('icon-container');
-                    $('.cd-header').addClass('icon-container1');
-                    $('#logo').attr("src","images/logo_white.png");
+                    $('.line').css("background-color","#fff");
+                    $('#logo').attr("src","images/logo_white.png").css("margin-top","-9%");
            
                 } else {
                     $('.cd-header').removeClass('is-visible is-fixed');
-                    $('.cd-header').removeClass('icon-container1');
                     $('#logo').attr("src","images/logo.png");
+                    $('.line').css("background-color","#0079dd");
 
                 }
 
