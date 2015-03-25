@@ -65,6 +65,7 @@ $( "#show_more" ).click(function() {
         if( $('.cd-primary-nav').hasClass('is-visible') ) {
             
             $('.cd-primary-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+                $('.icon-container').addClass('is-visible');
                 $('body').removeClass('overflow-hidden');
                 
             });
